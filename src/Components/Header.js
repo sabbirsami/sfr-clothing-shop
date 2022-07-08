@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../Images/logo.png";
+import { BsCart3 } from "react-icons/bs";
 
 const Header = () => {
     return (
@@ -24,7 +25,9 @@ const Header = () => {
                             <Nav.Link href="#pricing">Blogs</Nav.Link>
                             <Nav.Link href="#pricing">About Us</Nav.Link>
                             <Nav.Link href="#pricing">Contact</Nav.Link>
-                            <Nav.Link href="#pricing">cart</Nav.Link>
+                            <Nav.Link href="#pricing">
+                                <BsCart3 />
+                            </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
