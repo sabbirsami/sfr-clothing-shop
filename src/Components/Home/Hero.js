@@ -12,7 +12,7 @@ const Hero = () => {
                                 New, <span className="fs-stock">Amazing</span>{" "}
                                 Stuff is Here...
                             </h1>
-                            <p className="text-muted pb-3 fs-5 pb-lg-5">
+                            <p className="text-muted pb-3 fs-5 pb-lg-4">
                                 Shop today and get{" "}
                                 <span className="text-dark">20% discount</span>
                             </p>
