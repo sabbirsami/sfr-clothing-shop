@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import logo from "../Images/logo.png";
+import logo from "../../Images/logo.png";
 import { BsCart3 } from "react-icons/bs";
 
 const Header = () => {
