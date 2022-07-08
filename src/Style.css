@@ -16,6 +16,13 @@ body {
     background-size: cover;
     height: 100%;
 }
+.shop-bg {
+    background-image: url("./Images/products/banner/b16.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
 .fs-stock {
     color: transparent;
     -webkit-text-fill-color: transparent;

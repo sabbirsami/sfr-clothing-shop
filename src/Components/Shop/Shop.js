@@ -12,22 +12,16 @@ const Shop = () => {
     }
     return (
         <div>
+            <div className="container-fluid shop-bg">
+                <div className="py-5">
+                    <h1 className="py-5 display-2 text-center text-white">
+                        #Shop
+                    </h1>
+                </div>
+            </div>
             <div className="container">
                 <div className="py-3">
                     <div className="row">
-                        <div className="col-lg-3">
-                            <div className="d-flex pt-5 align-items-center">
-                                <div className="py-3 text-start">
-                                    <h1 className="display-1 heading-font">
-                                        Shop
-                                    </h1>
-                                    <p className="fs-5 fw-light">
-                                        Summer Collection New Modern Design{" "}
-                                        <HiOutlineMinus />
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
                         {products.map((product, index) => (
                             <Product key={index} product={product} />
                         ))}
