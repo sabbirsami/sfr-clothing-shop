@@ -3,6 +3,7 @@ import Benefit from "./Benefit";
 import FeaturedProduct from "./FeaturedProduct";
 import Hero from "./Hero";
 import Newsletter from "./Newsletter";
+import Offer from "./Offer";
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
             <Hero />
             <FeaturedProduct />
             <Benefit />
+            <Offer />
             <Newsletter />
         </>
     );
