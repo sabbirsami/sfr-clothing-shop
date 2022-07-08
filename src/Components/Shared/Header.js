@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../../Images/logo.png";
 import { BsCart3 } from "react-icons/bs";
+import CustomLink from "./CustomLink";
 
 const Header = () => {
     return (
@@ -20,14 +21,14 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto">
-                            <Nav.Link href="#features">Home</Nav.Link>
-                            <Nav.Link href="#pricing">Shop</Nav.Link>
-                            <Nav.Link href="#pricing">Blogs</Nav.Link>
-                            <Nav.Link href="#pricing">About Us</Nav.Link>
-                            <Nav.Link href="#pricing">Contact</Nav.Link>
-                            <Nav.Link href="#pricing">
-                                <BsCart3 />
-                            </Nav.Link>
+                            <CustomLink to="/">HOME</CustomLink>
+                            <CustomLink to="/pricing">SHOP</CustomLink>
+                            <CustomLink to="/pricing">BLOGS</CustomLink>
+                            <CustomLink to="/pricing">ABOUT US</CustomLink>
+                            <CustomLink to="/pricing">CONTACT</CustomLink>
+                            <CustomLink to="/pricing">
+                                <BsCart3 className="mb-1 fw-semibold fs-5" />
+                            </CustomLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
