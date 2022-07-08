@@ -6,7 +6,7 @@ import CustomLink from "./CustomLink";
 
 const Header = () => {
     return (
-        <header>
+        <header className="sticky-top">
             <Navbar collapseOnSelect expand="lg" bg="light" variant="white">
                 <Container>
                     <Navbar.Brand href="#home">
