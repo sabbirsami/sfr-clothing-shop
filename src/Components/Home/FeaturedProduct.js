@@ -27,6 +27,7 @@ const FeaturedProduct = () => {
                             <Product key={index} product={product} />
                         ))}
                     </div>
+                    <p className="text-center fs-5 fw-light pt-4">Load More</p>
                 </div>
             </div>
         </div>

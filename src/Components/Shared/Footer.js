@@ -5,13 +5,14 @@ import {
     FaInstagram,
     FaSkype,
     FaPinterest,
+    FaRegHeart,
 } from "react-icons/fa";
 
 const Footer = () => {
     return (
         <div className=" border-top">
             <div className="container py-5">
-                <div className="row  justify-content-between">
+                <div className="row pb-3 justify-content-between">
                     <div className="col-lg-2 d-flex align-items-center justify-content-between">
                         <p>Blog</p>
                         <p>FAQs</p>
@@ -25,6 +26,13 @@ const Footer = () => {
                             <FaSkype className="me-3" /> <FaPinterest />
                         </p>
                     </div>
+                </div>
+                <div className="row">
+                    <p>
+                        ©2022 All Rights Reserverd. This website is made with{" "}
+                        <FaRegHeart className="text-danger" /> by{" "}
+                        <span className="text-danger">SFR store</span>
+                    </p>
                 </div>
             </div>
         </div>
