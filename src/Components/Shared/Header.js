@@ -23,7 +23,7 @@ const Header = () => {
                         <Nav className="ms-auto">
                             <CustomLink to="/">HOME</CustomLink>
                             <CustomLink to="/shop">SHOP</CustomLink>
-                            <CustomLink to="/pricing">BLOGS</CustomLink>
+                            <CustomLink to="/blogs">BLOGS</CustomLink>
                             <CustomLink to="/pricing">ABOUT US</CustomLink>
                             <CustomLink to="/pricing">CONTACT</CustomLink>
                             <CustomLink to="/pricing">
