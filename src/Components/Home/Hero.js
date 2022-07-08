@@ -1,4 +1,5 @@
 import React from "react";
+import { BsCart3 } from "react-icons/bs";
 
 const Hero = () => {
     return (
@@ -7,16 +8,17 @@ const Hero = () => {
                 <div className="container py-5">
                     <div className="row py-lg-5">
                         <div className="col-lg-6 py-lg-5">
-                            <h1 className="display-2 pt-4 col-lg-10 fw-bold">
+                            <h1 className="display-1 pt-4  fw-bold">
                                 New, <span className="fs-stock">Amazing</span>{" "}
-                                Stuff is Here
+                                Stuff is Here...
                             </h1>
-                            <p className="text-muted pb-3 pb-lg-5">
+                            <p className="text-muted pb-3 fs-5 pb-lg-5">
                                 Shop today and get{" "}
                                 <span className="text-dark">20% discount</span>
                             </p>
-                            <button className="btn mb-lg-5 mb-5 btn-danger px-5 rounded-0">
-                                Shop Now
+                            <button className="btn mb-lg-5 mb-5 border-3 btn-primary text-white border-success px-4 py-2 rounded-0">
+                                Shop Now{" "}
+                                <BsCart3 className="mb-1 ms-2 fw-semibold fs-5" />
                             </button>
                         </div>
                     </div>
