@@ -31,7 +31,9 @@ const Footer = () => {
                     <p>
                         ©2022 All Rights Reserverd. This website is made with{" "}
                         <FaRegHeart className="text-danger" /> by{" "}
-                        <span className="text-danger">SFR store</span>
+                        <span className="text-danger fw-semibold">
+                            SFR store
+                        </span>
                     </p>
                 </div>
             </div>

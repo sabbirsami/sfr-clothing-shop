@@ -9,8 +9,11 @@ const Newsletter = () => {
                     <div className="col-lg-6">
                         <h4>Newsletter</h4>
                         <p>
-                            Subscribe to our newsletter and get 20% off your
-                            first purchase
+                            Subscribe to our newsletter and get{" "}
+                            <span className="text-danger fw-semibold">
+                                20% off
+                            </span>{" "}
+                            your first purchase
                         </p>
                     </div>
                     <div className="col-lg-6">
