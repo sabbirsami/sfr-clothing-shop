@@ -22,7 +22,7 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto">
                             <CustomLink to="/">HOME</CustomLink>
-                            <CustomLink to="/pricing">SHOP</CustomLink>
+                            <CustomLink to="/shop">SHOP</CustomLink>
                             <CustomLink to="/pricing">BLOGS</CustomLink>
                             <CustomLink to="/pricing">ABOUT US</CustomLink>
                             <CustomLink to="/pricing">CONTACT</CustomLink>
