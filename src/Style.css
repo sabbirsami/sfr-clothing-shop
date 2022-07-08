@@ -2,3 +2,16 @@ body {
     font-family: "Libre Baskerville", serif;
     font-family: "Poppins", sans-serif;
 }
+.hero-bg {
+    background-image: url("./Images/banner/banner1.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.fs-stock {
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000000;
+}
