@@ -1,7 +1,6 @@
 import React from "react";
 import { useQuery } from "react-query";
 import Product from "../Home/Product";
-import { HiOutlineMinus } from "react-icons/hi";
 
 const Shop = () => {
     const { data: products, isLoading } = useQuery("products", () =>
