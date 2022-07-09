@@ -16,6 +16,13 @@ body {
     background-size: cover;
     height: 100%;
 }
+.about-bg {
+    background-image: url("./Images/products/banner/b1.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
 .blog1 {
     background-image: url("./Images/products/blogs/b1.jpg");
     background-position: center center;
