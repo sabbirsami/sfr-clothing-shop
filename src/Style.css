@@ -24,11 +24,11 @@ body {
     height: 100%;
 }
 .contact-bg {
-    background-image: url("./Images/products/banner/b8.jpg");
-    background-position: center center;
+    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(0, 0, 0, 0.45)),
+        url("./Images/products/banner/b8.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+    background-position: center center;
 }
 .blog1 {
     background-image: url("./Images/products/blogs/b1.jpg");
