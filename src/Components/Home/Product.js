@@ -3,7 +3,11 @@ import { FaStar } from "react-icons/fa";
 import { BsCart3 } from "react-icons/bs";
 
 const Products = ({ product }) => {
-    const { name, image, brand, quantity, price, details } = product;
+    const { _id, name, image, brand, quantity, price, details } = product;
+
+    const handleAddToCart = (id) => {
+        console.log(id);
+    };
     return (
         <div className="col-lg-3 py-3">
             <div className="p-1 rounded-2 border">
@@ -24,7 +28,10 @@ const Products = ({ product }) => {
                     <h5>{name}</h5>
                     <h3 className=" d-flex justify-content-between align-items-center">
                         <p className="m-0">${price}</p>
-                        <button className=" btn rounded-pill bg-alert-success">
+                        <button
+                            onClick={() => handleAddToCart(_id)}
+                            className=" btn rounded-pill bg-alert-success"
+                        >
                             <BsCart3 className="mb-1 mx-1 fw-semibold fs-5" />
                         </button>
                     </h3>
