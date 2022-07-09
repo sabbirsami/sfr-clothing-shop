@@ -25,7 +25,7 @@ const Header = () => {
                             <CustomLink to="/shop">SHOP</CustomLink>
                             <CustomLink to="/blogs">BLOGS</CustomLink>
                             <CustomLink to="/about">ABOUT US</CustomLink>
-                            <CustomLink to="/pricing">CONTACT</CustomLink>
+                            <CustomLink to="/contact">CONTACT</CustomLink>
                             <CustomLink to="/pricing">
                                 <BsCart3 className="mb-1 fw-semibold fs-5" />
                             </CustomLink>
