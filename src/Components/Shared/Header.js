@@ -9,7 +9,7 @@ const Header = () => {
         <header className="sticky-top">
             <Navbar collapseOnSelect expand="lg" bg="light" variant="white">
                 <Container>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand href="">
                         <div className="w-75">
                             <img
                                 className="img-fluid w-75 pb-2"

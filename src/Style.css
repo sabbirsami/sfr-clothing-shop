@@ -48,7 +48,8 @@ body {
     color: transparent;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #000000;
+    -webkit-text-stroke-color: #107aea;
+    filter: blur(0.8px);
 }
 .heading-font {
     font-family: "Libre Baskerville", serif;
