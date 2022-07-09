@@ -2,6 +2,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
 import { useState } from "react";
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
 
 const Cart = () => {
     const { id } = useParams();
@@ -9,6 +11,7 @@ const Cart = () => {
     const { data: product, isLoading } = useQuery("product", () =>
         fetch(`http://localhost:5000/products/${id}`).then((res) => res.json())
     );
+    const [orderQuantity, setOrderQuantity] = useState(1);
     const { productImage, setProductImage } = useState("");
 
     if (isLoading) {
@@ -28,6 +31,17 @@ const Cart = () => {
         details,
     } = product[0];
     console.log(productImage);
+
+    const subtractOrderQuantity = () => {
+        if (orderQuantity > 1) {
+            setOrderQuantity(orderQuantity - 1);
+        }
+    };
+    const addOrderQuantity = () => {
+        if (orderQuantity < quantity) {
+            setOrderQuantity(orderQuantity + 1);
+        }
+    };
     const handleSetProductImage = (image) => {
         setProductImage(image);
     };
@@ -92,13 +106,35 @@ const Cart = () => {
                             <h1 className="mb-3">{name}</h1>
                             {/* <p className="mb-0">Price</p> */}
                             <h1>${price}</h1>
-                            <p className=" fw-semibold fs-6">
+                            <p className=" fw-semibold mb-4 fs-6">
                                 Stock: {quantity}
                             </p>
-                            <button className="btn rounded-1 text-white btn-bg px-4">
-                                ADD TO CART
-                            </button>
-                            <p className="mt-5 fw-semibold">{details}</p>
+                            <div className="d-flex ">
+                                <div className="col-2">
+                                    <InputGroup className="mb-3">
+                                        <InputGroup.Text
+                                            className="pe-auto p-0"
+                                            onClick={subtractOrderQuantity}
+                                        >
+                                            <button className="btn"> -</button>
+                                        </InputGroup.Text>
+                                        <Form.Control
+                                            aria-label="Amount (to the nearest dollar)"
+                                            value={orderQuantity}
+                                        />
+                                        <InputGroup.Text
+                                            className="pe-auto p-0"
+                                            onClick={addOrderQuantity}
+                                        >
+                                            <button className="btn"> +</button>
+                                        </InputGroup.Text>
+                                    </InputGroup>
+                                </div>
+                                <button className="btn rounded-1 mb-3 ms-3 text-white btn-bg px-4">
+                                    ADD TO CART
+                                </button>
+                            </div>
+                            <p className="mt-3 fw-semibold">{details}</p>
                             {description.map((des, index) => (
                                 <li className=" fw-semibold" key={index}>
                                     {des}
