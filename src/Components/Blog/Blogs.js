@@ -1,5 +1,4 @@
 import React from "react";
-import blog1 from "../../Images/products/blogs/b1.jpg";
 
 const Blogs = () => {
     return (
@@ -12,7 +11,7 @@ const Blogs = () => {
                 </div>
             </div>
             <div className="container py-5">
-                <div className="row">
+                <div className="row pt-5 mt-5">
                     <div className="col-lg-6 ">
                         <div
                             className="blog1"
@@ -20,16 +19,20 @@ const Blogs = () => {
                         ></div>
                     </div>
                     <div className="col-lg-6 my-auto">
-                        <h1>The Cotton-Jersey zip-Up Hooding</h1>
-                        <p>
+                        <h1 className="display-4">
+                            The Cotton-Jersey zip-Up Hooding
+                        </h1>
+                        <p className="fs-5 fw-light">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Ratione voluptatum aspernatur ea aut error
                             natus minima optio fuga quos consectetur.
                         </p>
-                        <button className="btn ps-0">CONTINUE READING</button>
+                        <button className="btn ps-0">
+                            CONTINUE READING...
+                        </button>
                     </div>
                 </div>
-                <div className="row mt-5">
+                <div className="row pt-5 mt-5">
                     <div className="col-lg-6 ">
                         <div
                             className="blog1"
@@ -37,16 +40,20 @@ const Blogs = () => {
                         ></div>
                     </div>
                     <div className="col-lg-6 my-auto">
-                        <h1>The Cotton-Jersey zip-Up Hooding</h1>
-                        <p>
+                        <h1 className="display-4">
+                            The Cotton-Jersey zip-Up Hooding
+                        </h1>
+                        <p className="fs-5 fw-light">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Ratione voluptatum aspernatur ea aut error
                             natus minima optio fuga quos consectetur.
                         </p>
-                        <button className="btn ps-0">CONTINUE READING</button>
+                        <button className="btn ps-0">
+                            CONTINUE READING...
+                        </button>
                     </div>
                 </div>
-                <div className="row mt-5">
+                <div className="row pt-5 mt-5">
                     <div className="col-lg-6 ">
                         <div
                             className="blog1"
@@ -54,30 +61,17 @@ const Blogs = () => {
                         ></div>
                     </div>
                     <div className="col-lg-6 my-auto">
-                        <h1>The Cotton-Jersey zip-Up Hooding</h1>
-                        <p>
+                        <h1 className="display-4">
+                            The Cotton-Jersey zip-Up Hooding
+                        </h1>
+                        <p className="fs-5 fw-light">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Ratione voluptatum aspernatur ea aut error
                             natus minima optio fuga quos consectetur.
                         </p>
-                        <button className="btn ps-0">CONTINUE READING</button>
-                    </div>
-                </div>
-                <div className="row mt-5">
-                    <div className="col-lg-6 ">
-                        <div
-                            className="blog1"
-                            style={{ height: "350px", width: "500px" }}
-                        ></div>
-                    </div>
-                    <div className="col-lg-6 my-auto">
-                        <h1>The Cotton-Jersey zip-Up Hooding</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Ratione voluptatum aspernatur ea aut error
-                            natus minima optio fuga quos consectetur.
-                        </p>
-                        <button className="btn ps-0">CONTINUE READING</button>
+                        <button className="btn ps-0">
+                            CONTINUE READING...
+                        </button>
                     </div>
                 </div>
             </div>
