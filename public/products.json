@@ -4,6 +4,15 @@
         "price": "219",
         "brand": "Lycra",
         "quantity": 39,
+        "description": [
+            "Care Instructions: Hand Wash Only",
+            "Fit Type: Regular Fit",
+            "Stylish Half sleeve Casual Printed Shirts & Party Wear Casual shirts",
+            "100% Premium Poly Cotton, Pre Washed for an extremely soft finish and Rich look",
+            "Disclaimer: Product color may slightly vary due to photographic lighting sources or your monitor settings",
+            "No cost EMI available on select cards. Please check 'EMI options' above for more details.",
+            "Get GST invoice and save up to 28% on business purchases."
+        ],
         "image": "https://i.ibb.co/N6PD0Cp/p1.jpg",
         "image-1": "https://i.ibb.co/H7tdc1B/p1-2.jpg",
         "image-2": "https://i.ibb.co/7Cqf7cV/p1-3.jpg",
@@ -16,8 +25,16 @@
         "price": "139",
         "brand": "Adidas",
         "quantity": 39,
+        "description": [
+            "Care Instructions: Hand Wash Only",
+            "Fit Type: Regular Fit",
+            "Stylish Half sleeve Casual Printed Shirts & Party Wear Casual shirts",
+            "100% Premium Poly Cotton, Pre Washed for an extremely soft finish and Rich look",
+            "Disclaimer: Product color may slightly vary due to photographic lighting sources or your monitor settings",
+            "No cost EMI available on select cards. Please check 'EMI options' above for more details.",
+            "Get GST invoice and save up to 28% on business purchases."
+        ],
         "image": "https://i.ibb.co/5czNQZb/f1.jpg",
-
         "image-1": "https://i.ibb.co/H7tdc1B/p1-2.jpg",
         "image-2": "https://i.ibb.co/7Cqf7cV/p1-3.jpg",
         "image-3": "https://i.ibb.co/68vXsGd/p1-4.jpg",
@@ -29,8 +46,16 @@
         "price": "239",
         "brand": "Look Mark",
         "quantity": 69,
+        "description": [
+            "Care Instructions: Hand Wash Only",
+            "Fit Type: Regular Fit",
+            "Stylish Half sleeve Casual Printed Shirts & Party Wear Casual shirts",
+            "100% Premium Poly Cotton, Pre Washed for an extremely soft finish and Rich look",
+            "Disclaimer: Product color may slightly vary due to photographic lighting sources or your monitor settings",
+            "No cost EMI available on select cards. Please check 'EMI options' above for more details.",
+            "Get GST invoice and save up to 28% on business purchases."
+        ],
         "image": "https://i.ibb.co/RzqRMZM/f2.jpg",
-
         "image-1": "https://i.ibb.co/H7tdc1B/p1-2.jpg",
         "image-2": "https://i.ibb.co/7Cqf7cV/p1-3.jpg",
         "image-3": "https://i.ibb.co/68vXsGd/p1-4.jpg",
@@ -40,10 +65,18 @@
     {
         "name": "Digital Printed Stylish Shirts",
         "price": "189",
-        "brand": "DESTINY",
+        "brand": "Destiny",
         "quantity": 49,
+        "description": [
+            "Care Instructions: Hand Wash Only",
+            "Fit Type: Regular Fit",
+            "Stylish Half sleeve Casual Printed Shirts & Party Wear Casual shirts",
+            "100% Premium Poly Cotton, Pre Washed for an extremely soft finish and Rich look",
+            "Disclaimer: Product color may slightly vary due to photographic lighting sources or your monitor settings",
+            "No cost EMI available on select cards. Please check 'EMI options' above for more details.",
+            "Get GST invoice and save up to 28% on business purchases."
+        ],
         "image": "https://i.ibb.co/J2dstLJ/f3.jpg",
-
         "image-1": "https://i.ibb.co/H7tdc1B/p1-2.jpg",
         "image-2": "https://i.ibb.co/7Cqf7cV/p1-3.jpg",
         "image-3": "https://i.ibb.co/68vXsGd/p1-4.jpg",
@@ -54,9 +87,17 @@
         "name": "Lycra Shirt",
         "price": "199",
         "brand": "Dream",
-        "quantity": 39,
+        "quantity": 59,
+        "description": [
+            "Care Instructions: Hand Wash Only",
+            "Fit Type: Regular Fit",
+            "Stylish Half sleeve Casual Printed Shirts & Party Wear Casual shirts",
+            "100% Premium Poly Cotton, Pre Washed for an extremely soft finish and Rich look",
+            "Disclaimer: Product color may slightly vary due to photographic lighting sources or your monitor settings",
+            "No cost EMI available on select cards. Please check 'EMI options' above for more details.",
+            "Get GST invoice and save up to 28% on business purchases."
+        ],
         "image": "https://i.ibb.co/fp5T4Ky/f4.jpg",
-
         "image-1": "https://i.ibb.co/H7tdc1B/p1-2.jpg",
         "image-2": "https://i.ibb.co/7Cqf7cV/p1-3.jpg",
         "image-3": "https://i.ibb.co/68vXsGd/p1-4.jpg",
@@ -68,8 +109,16 @@
         "price": "299",
         "brand": "Adidas",
         "quantity": 39,
+        "description": [
+            "Care Instructions: Hand Wash Only",
+            "Fit Type: Regular Fit",
+            "Stylish Half sleeve Casual Printed Shirts & Party Wear Casual shirts",
+            "100% Premium Poly Cotton, Pre Washed for an extremely soft finish and Rich look",
+            "Disclaimer: Product color may slightly vary due to photographic lighting sources or your monitor settings",
+            "No cost EMI available on select cards. Please check 'EMI options' above for more details.",
+            "Get GST invoice and save up to 28% on business purchases."
+        ],
         "image": "https://i.ibb.co/2qRdYTp/f5.jpg",
-
         "image-1": "https://i.ibb.co/H7tdc1B/p1-2.jpg",
         "image-2": "https://i.ibb.co/7Cqf7cV/p1-3.jpg",
         "image-3": "https://i.ibb.co/68vXsGd/p1-4.jpg",
@@ -81,8 +130,16 @@
         "price": "143",
         "brand": "Adidas",
         "quantity": 39,
+        "description": [
+            "Care Instructions: Hand Wash Only",
+            "Fit Type: Regular Fit",
+            "Stylish Half sleeve Casual Printed Shirts & Party Wear Casual shirts",
+            "100% Premium Poly Cotton, Pre Washed for an extremely soft finish and Rich look",
+            "Disclaimer: Product color may slightly vary due to photographic lighting sources or your monitor settings",
+            "No cost EMI available on select cards. Please check 'EMI options' above for more details.",
+            "Get GST invoice and save up to 28% on business purchases."
+        ],
         "image": "https://i.ibb.co/MhGrqq6/f6.jpg",
-
         "image-1": "https://i.ibb.co/H7tdc1B/p1-2.jpg",
         "image-2": "https://i.ibb.co/7Cqf7cV/p1-3.jpg",
         "image-3": "https://i.ibb.co/68vXsGd/p1-4.jpg",
@@ -94,8 +151,16 @@
         "price": "99",
         "brand": "Adidas",
         "quantity": 39,
+        "description": [
+            "Care Instructions: Hand Wash Only",
+            "Fit Type: Regular Fit",
+            "Stylish Half sleeve Casual Printed Shirts & Party Wear Casual shirts",
+            "100% Premium Poly Cotton, Pre Washed for an extremely soft finish and Rich look",
+            "Disclaimer: Product color may slightly vary due to photographic lighting sources or your monitor settings",
+            "No cost EMI available on select cards. Please check 'EMI options' above for more details.",
+            "Get GST invoice and save up to 28% on business purchases."
+        ],
         "image": "https://i.ibb.co/t8mrVHz/f7.jpg",
-
         "image-1": "https://i.ibb.co/H7tdc1B/p1-2.jpg",
         "image-2": "https://i.ibb.co/7Cqf7cV/p1-3.jpg",
         "image-3": "https://i.ibb.co/68vXsGd/p1-4.jpg",
@@ -107,8 +172,16 @@
         "price": "151",
         "brand": "Adidas",
         "quantity": 39,
+        "description": [
+            "Care Instructions: Hand Wash Only",
+            "Fit Type: Regular Fit",
+            "Stylish Half sleeve Casual Printed Shirts & Party Wear Casual shirts",
+            "100% Premium Poly Cotton, Pre Washed for an extremely soft finish and Rich look",
+            "Disclaimer: Product color may slightly vary due to photographic lighting sources or your monitor settings",
+            "No cost EMI available on select cards. Please check 'EMI options' above for more details.",
+            "Get GST invoice and save up to 28% on business purchases."
+        ],
         "image": "https://i.ibb.co/dQMGtst/f8.jpg",
-
         "image-1": "https://i.ibb.co/H7tdc1B/p1-2.jpg",
         "image-2": "https://i.ibb.co/7Cqf7cV/p1-3.jpg",
         "image-3": "https://i.ibb.co/68vXsGd/p1-4.jpg",
@@ -120,8 +193,16 @@
         "price": "139",
         "brand": "Adidas",
         "quantity": 39,
+        "description": [
+            "Care Instructions: Hand Wash Only",
+            "Fit Type: Regular Fit",
+            "Stylish Half sleeve Casual Printed Shirts & Party Wear Casual shirts",
+            "100% Premium Poly Cotton, Pre Washed for an extremely soft finish and Rich look",
+            "Disclaimer: Product color may slightly vary due to photographic lighting sources or your monitor settings",
+            "No cost EMI available on select cards. Please check 'EMI options' above for more details.",
+            "Get GST invoice and save up to 28% on business purchases."
+        ],
         "image": "https://i.ibb.co/XfQNt0B/n1.jpg",
-
         "image-1": "https://i.ibb.co/H7tdc1B/p1-2.jpg",
         "image-2": "https://i.ibb.co/7Cqf7cV/p1-3.jpg",
         "image-3": "https://i.ibb.co/68vXsGd/p1-4.jpg",
@@ -133,8 +214,16 @@
         "price": "139",
         "brand": "Adidas",
         "quantity": 39,
+        "description": [
+            "Care Instructions: Hand Wash Only",
+            "Fit Type: Regular Fit",
+            "Stylish Half sleeve Casual Printed Shirts & Party Wear Casual shirts",
+            "100% Premium Poly Cotton, Pre Washed for an extremely soft finish and Rich look",
+            "Disclaimer: Product color may slightly vary due to photographic lighting sources or your monitor settings",
+            "No cost EMI available on select cards. Please check 'EMI options' above for more details.",
+            "Get GST invoice and save up to 28% on business purchases."
+        ],
         "image": "https://i.ibb.co/4SG0Nnm/n2.jpg",
-
         "image-1": "https://i.ibb.co/H7tdc1B/p1-2.jpg",
         "image-2": "https://i.ibb.co/7Cqf7cV/p1-3.jpg",
         "image-3": "https://i.ibb.co/68vXsGd/p1-4.jpg",
@@ -146,8 +235,16 @@
         "price": "139",
         "brand": "Adidas",
         "quantity": 39,
+        "description": [
+            "Care Instructions: Hand Wash Only",
+            "Fit Type: Regular Fit",
+            "Stylish Half sleeve Casual Printed Shirts & Party Wear Casual shirts",
+            "100% Premium Poly Cotton, Pre Washed for an extremely soft finish and Rich look",
+            "Disclaimer: Product color may slightly vary due to photographic lighting sources or your monitor settings",
+            "No cost EMI available on select cards. Please check 'EMI options' above for more details.",
+            "Get GST invoice and save up to 28% on business purchases."
+        ],
         "image": "https://i.ibb.co/6DQcskj/n3.jpg",
-
         "image-1": "https://i.ibb.co/H7tdc1B/p1-2.jpg",
         "image-2": "https://i.ibb.co/7Cqf7cV/p1-3.jpg",
         "image-3": "https://i.ibb.co/68vXsGd/p1-4.jpg",
@@ -159,8 +256,16 @@
         "price": "139",
         "brand": "Adidas",
         "quantity": 39,
+        "description": [
+            "Care Instructions: Hand Wash Only",
+            "Fit Type: Regular Fit",
+            "Stylish Half sleeve Casual Printed Shirts & Party Wear Casual shirts",
+            "100% Premium Poly Cotton, Pre Washed for an extremely soft finish and Rich look",
+            "Disclaimer: Product color may slightly vary due to photographic lighting sources or your monitor settings",
+            "No cost EMI available on select cards. Please check 'EMI options' above for more details.",
+            "Get GST invoice and save up to 28% on business purchases."
+        ],
         "image": "https://i.ibb.co/vqZgdLq/n4.jpg",
-
         "image-1": "https://i.ibb.co/H7tdc1B/p1-2.jpg",
         "image-2": "https://i.ibb.co/7Cqf7cV/p1-3.jpg",
         "image-3": "https://i.ibb.co/68vXsGd/p1-4.jpg",
@@ -172,8 +277,16 @@
         "price": "139",
         "brand": "Adidas",
         "quantity": 39,
+        "description": [
+            "Care Instructions: Hand Wash Only",
+            "Fit Type: Regular Fit",
+            "Stylish Half sleeve Casual Printed Shirts & Party Wear Casual shirts",
+            "100% Premium Poly Cotton, Pre Washed for an extremely soft finish and Rich look",
+            "Disclaimer: Product color may slightly vary due to photographic lighting sources or your monitor settings",
+            "No cost EMI available on select cards. Please check 'EMI options' above for more details.",
+            "Get GST invoice and save up to 28% on business purchases."
+        ],
         "image": "https://i.ibb.co/LZc01Qp/n6.jpg",
-
         "image-1": "https://i.ibb.co/H7tdc1B/p1-2.jpg",
         "image-2": "https://i.ibb.co/7Cqf7cV/p1-3.jpg",
         "image-3": "https://i.ibb.co/68vXsGd/p1-4.jpg",
@@ -185,8 +298,16 @@
         "price": "139",
         "brand": "Adidas",
         "quantity": 39,
+        "description": [
+            "Care Instructions: Hand Wash Only",
+            "Fit Type: Regular Fit",
+            "Stylish Half sleeve Casual Printed Shirts & Party Wear Casual shirts",
+            "100% Premium Poly Cotton, Pre Washed for an extremely soft finish and Rich look",
+            "Disclaimer: Product color may slightly vary due to photographic lighting sources or your monitor settings",
+            "No cost EMI available on select cards. Please check 'EMI options' above for more details.",
+            "Get GST invoice and save up to 28% on business purchases."
+        ],
         "image": "https://i.ibb.co/Stkm3HR/n5.jpg",
-
         "image-1": "https://i.ibb.co/H7tdc1B/p1-2.jpg",
         "image-2": "https://i.ibb.co/7Cqf7cV/p1-3.jpg",
         "image-3": "https://i.ibb.co/68vXsGd/p1-4.jpg",
@@ -198,8 +319,16 @@
         "price": "139",
         "brand": "Adidas",
         "quantity": 39,
+        "description": [
+            "Care Instructions: Hand Wash Only",
+            "Fit Type: Regular Fit",
+            "Stylish Half sleeve Casual Printed Shirts & Party Wear Casual shirts",
+            "100% Premium Poly Cotton, Pre Washed for an extremely soft finish and Rich look",
+            "Disclaimer: Product color may slightly vary due to photographic lighting sources or your monitor settings",
+            "No cost EMI available on select cards. Please check 'EMI options' above for more details.",
+            "Get GST invoice and save up to 28% on business purchases."
+        ],
         "image": "https://i.ibb.co/Zf5XcmB/n7.jpg",
-
         "image-1": "https://i.ibb.co/H7tdc1B/p1-2.jpg",
         "image-2": "https://i.ibb.co/7Cqf7cV/p1-3.jpg",
         "image-3": "https://i.ibb.co/68vXsGd/p1-4.jpg",
@@ -211,8 +340,16 @@
         "price": "139",
         "brand": "Adidas",
         "quantity": 39,
+        "description": [
+            "Care Instructions: Hand Wash Only",
+            "Fit Type: Regular Fit",
+            "Stylish Half sleeve Casual Printed Shirts & Party Wear Casual shirts",
+            "100% Premium Poly Cotton, Pre Washed for an extremely soft finish and Rich look",
+            "Disclaimer: Product color may slightly vary due to photographic lighting sources or your monitor settings",
+            "No cost EMI available on select cards. Please check 'EMI options' above for more details.",
+            "Get GST invoice and save up to 28% on business purchases."
+        ],
         "image": "https://i.ibb.co/ZXHdCWQ/n8.jpg",
-
         "image-1": "https://i.ibb.co/H7tdc1B/p1-2.jpg",
         "image-2": "https://i.ibb.co/7Cqf7cV/p1-3.jpg",
         "image-3": "https://i.ibb.co/68vXsGd/p1-4.jpg",

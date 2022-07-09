@@ -13,7 +13,7 @@ const Shop = () => {
         <div>
             <div className="container-fluid shop-bg">
                 <div className="py-5">
-                    <h1 className="py-5 display-2 text-center text-white">
+                    <h1 className="py-5 display-2 text-center text-white text-shadow">
                         #Shop
                     </h1>
                 </div>

@@ -49,7 +49,11 @@ body {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #107aea;
-    filter: blur(0.8px);
+    /* filter: blur(0.8px); */
+    filter: drop-shadow(0 0 0.75rem #107aea);
+}
+.text-shadow {
+    filter: drop-shadow(0 0 0.75rem crimson);
 }
 .heading-font {
     font-family: "Libre Baskerville", serif;

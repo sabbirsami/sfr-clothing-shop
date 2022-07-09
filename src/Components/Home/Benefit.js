@@ -1,5 +1,7 @@
 import React from "react";
-import { FaTruck } from "react-icons/fa";
+import { FaTruck, FaRegMoneyBillAlt } from "react-icons/fa";
+import { AiOutlineReload } from "react-icons/ai";
+import { FiClock } from "react-icons/fi";
 
 const Benefit = () => {
     return (
@@ -26,11 +28,11 @@ const Benefit = () => {
                     >
                         <div className="d-flex align-items-center pb-2 ps-3">
                             <p>
-                                <FaTruck className="fs-1 me-3 text-danger" />
+                                <FaRegMoneyBillAlt className="fs-1 me-3 text-danger" />
                             </p>
                             <div className="mb-3">
-                                <p className="m-0">FREE SHIPPING</p>
-                                <small>Suffered Alteration in Some Form</small>
+                                <p className="m-0">CASH ON DELIVERY</p>
+                                <small>The Internet Tend To Repeat</small>
                             </div>
                         </div>
                     </div>
@@ -40,11 +42,11 @@ const Benefit = () => {
                     >
                         <div className="d-flex align-items-center pb-2 ps-3">
                             <p>
-                                <FaTruck className="fs-1 me-3 text-danger" />
+                                <AiOutlineReload className="fs-1 me-3 text-danger" />
                             </p>
                             <div className="mb-3">
-                                <p className="m-0">FREE SHIPPING</p>
-                                <small>Suffered Alteration in Some Form</small>
+                                <p className="m-0">45 DAYS RETURN</p>
+                                <small>Making it Look Like Readable</small>
                             </div>
                         </div>
                     </div>
@@ -54,11 +56,11 @@ const Benefit = () => {
                     >
                         <div className="d-flex align-items-center pb-2 ps-3">
                             <p>
-                                <FaTruck className="fs-1 me-3 text-danger" />
+                                <FiClock className="fs-1 me-3 text-danger" />
                             </p>
                             <div className="mb-3">
-                                <p className="m-0">FREE SHIPPING</p>
-                                <small>Suffered Alteration in Some Form</small>
+                                <p className="m-0">OPENING ALL WEEK</p>
+                                <small>8AM - 09PM</small>
                             </div>
                         </div>
                     </div>
