@@ -4,7 +4,7 @@ import Product from "../Home/Product";
 
 const Shop = () => {
     const { data: products, isLoading } = useQuery("products", () =>
-        fetch("products.json").then((res) => res.json())
+        fetch("http://localhost:5000/products").then((res) => res.json())
     );
     if (isLoading) {
         return <p>Loading</p>;
