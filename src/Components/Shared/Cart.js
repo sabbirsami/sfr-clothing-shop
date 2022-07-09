@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
+import { useState } from "react";
 
 const Cart = () => {
     const { id } = useParams();
@@ -8,10 +9,11 @@ const Cart = () => {
     const { data: product, isLoading } = useQuery("product", () =>
         fetch(`http://localhost:5000/products/${id}`).then((res) => res.json())
     );
+    const { productImage, setProductImage } = useState("");
+
     if (isLoading) {
         return <p>Loading..</p>;
     }
-
     const {
         name,
         price,
@@ -25,6 +27,10 @@ const Cart = () => {
         image_4,
         details,
     } = product[0];
+    console.log(productImage);
+    const handleSetProductImage = (image) => {
+        setProductImage(image);
+    };
 
     return (
         <div>
@@ -37,6 +43,47 @@ const Cart = () => {
                                 src={image}
                                 alt=""
                             />
+                        </div>
+                        <div className="d-flex">
+                            <button
+                                onClick={() => handleSetProductImage(image_2)}
+                                className="btn p-0 m-0 btn-outline-none border-0"
+                            >
+                                <div className="p-2 bg-light m-1 rounded">
+                                    <img
+                                        className="img-fluid rounded-2"
+                                        src={image_2}
+                                        alt=""
+                                    />
+                                </div>
+                            </button>
+                            <button className="btn p-0 m-0 btn-outline-none border-0">
+                                <div className="p-2 bg-light m-1 rounded">
+                                    <img
+                                        className="img-fluid rounded-2"
+                                        src={image_3}
+                                        alt=""
+                                    />
+                                </div>
+                            </button>
+                            <button className="btn p-0 m-0 btn-outline-none border-0">
+                                <div className="p-2 bg-light m-1 rounded">
+                                    <img
+                                        className="img-fluid rounded-2"
+                                        src={image_1}
+                                        alt=""
+                                    />
+                                </div>
+                            </button>
+                            <button className="btn p-0 m-0 btn-outline-none border-0">
+                                <div className="p-2 bg-light m-1 rounded">
+                                    <img
+                                        className="img-fluid rounded-2"
+                                        src={image_4}
+                                        alt=""
+                                    />
+                                </div>
+                            </button>
                         </div>
                     </div>
                     <div className="col-lg-7">
