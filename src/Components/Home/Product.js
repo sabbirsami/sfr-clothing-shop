@@ -1,6 +1,7 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { BsCart3 } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Products = ({ product }) => {
     const { _id, name, image, brand, quantity, price, details } = product;
@@ -28,12 +29,13 @@ const Products = ({ product }) => {
                     <h5>{name}</h5>
                     <h3 className=" d-flex justify-content-between align-items-center">
                         <p className="m-0">${price}</p>
-                        <button
-                            onClick={() => handleAddToCart(_id)}
+                        <Link
+                            to={`/shop/${_id}`}
+                            // onClick={() => handleAddToCart(_id)}
                             className=" btn rounded-pill bg-alert-success"
                         >
                             <BsCart3 className="mb-1 mx-1 fw-semibold fs-5" />
-                        </button>
+                        </Link>
                     </h3>
                 </div>
             </div>
