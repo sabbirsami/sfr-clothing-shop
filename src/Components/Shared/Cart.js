@@ -4,10 +4,10 @@ import { useQuery } from "react-query";
 import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
+import { useForm } from "react-hook-form";
 
 const Cart = () => {
     const { id } = useParams();
-
     const { data: product, isLoading } = useQuery("product", () =>
         fetch(`http://localhost:5000/products/${id}`).then((res) => res.json())
     );
@@ -17,6 +17,7 @@ const Cart = () => {
     if (isLoading) {
         return <p>Loading..</p>;
     }
+
     const {
         name,
         price,
@@ -30,7 +31,6 @@ const Cart = () => {
         image_4,
         details,
     } = product[0];
-    console.log(productImage);
 
     const subtractOrderQuantity = () => {
         if (orderQuantity > 1) {
@@ -44,6 +44,29 @@ const Cart = () => {
     };
     const handleSetProductImage = (image) => {
         setProductImage(image);
+    };
+
+    const handleAddToCart = () => {
+        const order = {
+            name: name,
+            price: price,
+            quantity: orderQuantity,
+            image: image,
+        };
+        fetch("http://localhost:5000/orders", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(order),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log("Success:", data);
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+            });
     };
 
     return (
@@ -130,7 +153,10 @@ const Cart = () => {
                                         </InputGroup.Text>
                                     </InputGroup>
                                 </div>
-                                <button className="btn rounded-1 mb-3 ms-3 text-white btn-bg px-4">
+                                <button
+                                    onClick={handleAddToCart}
+                                    className="btn rounded-1 mb-3 ms-3 text-white btn-bg px-4"
+                                >
                                     ADD TO CART
                                 </button>
                             </div>
