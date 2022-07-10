@@ -1,13 +1,14 @@
 import React from "react";
 import { useQuery } from "react-query";
 import Product from "../Home/Product";
+import Loading from "../Shared/Loading";
 
 const Shop = () => {
     const { data: products, isLoading } = useQuery("products", () =>
         fetch("http://localhost:5000/products").then((res) => res.json())
     );
     if (isLoading) {
-        return <p>Loading</p>;
+        return <Loading />;
     }
     return (
         <div>

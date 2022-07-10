@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
+import Loading from "./Loading";
 
 const ShippingBag = () => {
     const {
@@ -12,7 +13,7 @@ const ShippingBag = () => {
         fetch("http://localhost:5000/orders").then((res) => res.json())
     );
     if (isLoading) {
-        return <p>Loading</p>;
+        return <Loading />;
     }
 
     const handleCancel = (id) => {

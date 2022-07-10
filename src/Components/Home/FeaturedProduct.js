@@ -2,13 +2,14 @@ import React from "react";
 import { useQuery } from "react-query";
 import { HiOutlineMinus } from "react-icons/hi";
 import Product from "./Product";
+import Loading from "../Shared/Loading";
 
 const FeaturedProduct = () => {
     const { data: products, isLoading } = useQuery("products", () =>
         fetch("http://localhost:5000/products").then((res) => res.json())
     );
     if (isLoading) {
-        return <p>Loading</p>;
+        return <Loading />;
     }
 
     return (
