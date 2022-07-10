@@ -9,6 +9,7 @@ import Blogs from "./Components/Blog/Blogs";
 import About from "./Components/About/About";
 import Contact from "./Components/Contact";
 import Cart from "./Components/Shared/Cart";
+import ShippingBag from "./Components/Shared/ShippingBag";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/blogs" element={<Blogs />}></Route>
                 <Route path="/about" element={<About />}></Route>
                 <Route path="/contact" element={<Contact />}></Route>
+                <Route path="/shipping-bag" element={<ShippingBag />}></Route>
                 <Route path="/shop/:id" element={<Cart />}></Route>
             </Routes>
             <Footer />

@@ -62,6 +62,7 @@ const Cart = () => {
         })
             .then((response) => response.json())
             .then((data) => {
+                alert("success");
                 console.log("Success:", data);
             })
             .catch((error) => {
