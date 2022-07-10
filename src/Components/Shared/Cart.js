@@ -4,7 +4,7 @@ import { useQuery } from "react-query";
 import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const Cart = () => {
     const { id } = useParams();
@@ -62,7 +62,7 @@ const Cart = () => {
         })
             .then((response) => response.json())
             .then((data) => {
-                alert("success");
+                toast.success("Successfully added!");
                 console.log("Success:", data);
             })
             .catch((error) => {

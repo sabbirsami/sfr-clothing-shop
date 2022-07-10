@@ -3,6 +3,7 @@ import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
 import Loading from "./Loading";
+import toast from "react-hot-toast";
 
 const ShippingBag = () => {
     const {
@@ -23,7 +24,7 @@ const ShippingBag = () => {
         })
             .then((res) => res.json())
             .then((result) => {
-                alert("Order cancel");
+                toast.success("Cancel.");
                 refetch();
             });
     };

@@ -10,6 +10,7 @@ import About from "./Components/About/About";
 import Contact from "./Components/Contact";
 import Cart from "./Components/Shared/Cart";
 import ShippingBag from "./Components/Shared/ShippingBag";
+import { Toaster } from "react-hot-toast";
 
 function App() {
     return (
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/shop/:id" element={<Cart />}></Route>
             </Routes>
             <Footer />
+            <Toaster />
         </div>
     );
 }
