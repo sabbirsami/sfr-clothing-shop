@@ -13,10 +13,10 @@ const ShippingBag = () => {
 
     return (
         <div>
-            <div className="container-fluid">
+            <div className="container">
                 <div className="row justify-content-evenly">
-                    <div className="col-lg-8">
-                        <div className="p-5">
+                    <div className="col-lg-9">
+                        <div className="py-5 px-2">
                             <div className="d-flex align-items-center justify-content-between pb-4">
                                 <h2>Shopping Cart</h2>
                                 <h2>2 Items</h2>
@@ -95,7 +95,7 @@ const ShippingBag = () => {
                         className="col-lg-3"
                         style={{ backgroundColor: "#F5F5F6" }}
                     >
-                        <div className="p-5">
+                        <div className="py-5 px-2">
                             <div className="pb-4 border-bottom">
                                 <h2>Order Summary</h2>
                             </div>
