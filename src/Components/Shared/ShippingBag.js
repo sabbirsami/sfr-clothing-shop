@@ -13,7 +13,7 @@ const ShippingBag = () => {
     } = useQuery("orders", () =>
         fetch("http://localhost:5000/orders").then((res) => res.json())
     );
-    if (true || isLoading) {
+    if (isLoading) {
         return <Loading />;
     }
 

@@ -48,11 +48,13 @@ const Cart = () => {
 
     const handleAddToCart = () => {
         const order = {
+            id: id,
             name: name,
             price: price,
             quantity: orderQuantity,
             image: image,
         };
+        console.log(order);
         fetch("http://localhost:5000/orders", {
             method: "POST",
             headers: {
