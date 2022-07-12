@@ -63,8 +63,8 @@ const SignUp = () => {
                     </p>
                 </div>
                 <div className="row align-items-center">
-                    <div className="col-lg-6 px-lg-5">
-                        <div className="p-lg-5">
+                    <div className="col-lg-6 px-lg-5 border-end border-dark ">
+                        <div className="p-lg-5 bg-light">
                             <Form onSubmit={handleSubmit(onSubmit)}>
                                 <FloatingLabel
                                     controlId="floatingInput"
@@ -150,11 +150,11 @@ const SignUp = () => {
                             </Form>
                         </div>
                     </div>
-                    <div className="col-lg-6 px-lg-5 border-start">
+                    <div className="col-lg-6 px-lg-5 ">
                         <div className="p-lg-5">
                             <button
                                 onClick={() => signInWithGoogle()}
-                                className="p-0 btn btn-primary mb-3 rounded-0"
+                                className="p-0 w-100 btn btn-primary mb-3 rounded-0"
                             >
                                 <div className="d-flex align-items-center pe-4">
                                     <div className="bg-white p-1">
@@ -167,7 +167,7 @@ const SignUp = () => {
                             </button>
                             <button
                                 onClick={() => signInWithFacebook()}
-                                className="p-0 btn btn-light mb-3 border border-dark rounded-0"
+                                className="p-0 w-100 btn btn-light mb-3 border border-dark rounded-0"
                             >
                                 <div className="d-flex align-items-center">
                                     <div className="bg-primary p-1">
@@ -181,7 +181,7 @@ const SignUp = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-6 mx-auto">
+                <div className="col-lg-6 py-5 mx-auto">
                     <p className="text-center mx-auto text-muted">
                         <small>
                             * By Logging in, you agree to our{" "}
