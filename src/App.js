@@ -12,6 +12,7 @@ import Cart from "./Components/Shared/Cart";
 import ShippingBag from "./Components/Shared/ShippingBag";
 import { Toaster } from "react-hot-toast";
 import Login from "./Components/Shared/Login";
+import SignUp from "./Components/Shared/SignUp";
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/shipping-bag" element={<ShippingBag />}></Route>
                 <Route path="/shop/:id" element={<Cart />}></Route>
                 <Route path="/login" element={<Login />}></Route>
+                <Route path="/sign-up" element={<SignUp />}></Route>
             </Routes>
             <Footer />
             <Toaster />
