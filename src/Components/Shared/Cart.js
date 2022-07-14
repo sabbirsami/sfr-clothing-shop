@@ -5,16 +5,19 @@ import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import toast from "react-hot-toast";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 
 const Cart = () => {
     const { id } = useParams();
+    const [user, loading, error] = useAuthState(auth);
     const { data: product, isLoading } = useQuery("product", () =>
         fetch(`http://localhost:5000/products/${id}`).then((res) => res.json())
     );
     const [orderQuantity, setOrderQuantity] = useState(1);
     const { productImage, setProductImage } = useState("");
 
-    if (isLoading) {
+    if (isLoading || loading) {
         return <p>Loading..</p>;
     }
 
@@ -49,6 +52,7 @@ const Cart = () => {
     const handleAddToCart = () => {
         const order = {
             id: id,
+            email: user.email,
             name: name,
             price: price,
             quantity: orderQuantity,
