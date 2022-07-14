@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../Shared/Header";
 import Benefit from "./Benefit";
 import FeaturedProduct from "./FeaturedProduct";
 import Hero from "./Hero";
@@ -8,6 +9,7 @@ import Offer from "./Offer";
 const Home = () => {
     return (
         <>
+            <Header />
             <Hero />
             <FeaturedProduct />
             <Benefit />

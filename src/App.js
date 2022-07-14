@@ -19,7 +19,6 @@ import Dashboard from "./Components/Dashboard/Dashboard";
 function App() {
     return (
         <div className="App">
-            <Header />
             <Routes>
                 <Route path="/" element={<Home />}></Route>
                 <Route path="/shop" element={<Shop />}></Route>
