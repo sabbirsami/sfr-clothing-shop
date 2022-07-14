@@ -3,8 +3,19 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../../Images/logo.png";
 import { BsCart3 } from "react-icons/bs";
 import CustomLink from "./CustomLink";
+import auth from "../../firebase.init";
+import { useAuthState } from "react-firebase-hooks/auth";
+import Loading from "./Loading";
+import { signOut } from "firebase/auth";
 
 const Header = () => {
+    const [user, loading, error] = useAuthState(auth);
+    if (loading) {
+        return <Loading />;
+    }
+    const logout = () => {
+        signOut(auth);
+    };
     return (
         <header className="sticky-top">
             <Navbar collapseOnSelect expand="lg" bg="light" variant="white">
@@ -26,7 +37,13 @@ const Header = () => {
                             <CustomLink to="/blogs">BLOGS</CustomLink>
                             <CustomLink to="/about">ABOUT US</CustomLink>
                             <CustomLink to="/contact">CONTACT</CustomLink>
-                            <CustomLink to="/login">LOG IN</CustomLink>
+                            {user ? (
+                                <button onClick={logout} className="btn p-0">
+                                    LOG OUT
+                                </button>
+                            ) : (
+                                <CustomLink to="/login">LOG IN</CustomLink>
+                            )}
                             <CustomLink to="/shipping-bag">
                                 <BsCart3 className="mb-1 fw-semibold fs-5" />
                             </CustomLink>
