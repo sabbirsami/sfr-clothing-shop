@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
+import { RiDeleteBin2Fill } from "react-icons/ri";
 import Loading from "./Loading";
 import toast from "react-hot-toast";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -65,7 +66,7 @@ const ShippingBag = () => {
                                             TOTAL
                                         </div>
                                         <div className="col-2 fw-semibold">
-                                            REMOVE
+                                            <RiDeleteBin2Fill />
                                         </div>
                                     </div>
                                     {allOrders.orders.map((order) => (
@@ -109,7 +110,7 @@ const ShippingBag = () => {
                                                         }
                                                         className="btn ps-0 border-0 text-danger"
                                                     >
-                                                        Remove
+                                                        <RiDeleteBin2Fill />
                                                     </button>
                                                 </div>
                                             </div>

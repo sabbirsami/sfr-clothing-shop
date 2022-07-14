@@ -33,8 +33,8 @@ const Dashboard = () => {
             <div className="mt-2">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="px-4 py-1">
-                            <div className="d-flex justify-content-between align-items-center">
+                        <div className="px-4">
+                            <div className="d-flex justify-content-between align-items-center pb-2">
                                 <div className="col-lg-2">
                                     <Link to="/">
                                         <img
@@ -54,9 +54,9 @@ const Dashboard = () => {
                                 </div>
                                 <div className="col-lg-2 d-flex justify-content-end align-items-center">
                                     <div>
-                                        <h6 className="fw-semi-bold m-0 text-success">
-                                            {data?.name || user?.displayName}
-                                        </h6>
+                                        <h5 className="fw-semi-bold m-0 text-success">
+                                            {user?.displayName}
+                                        </h5>
                                         <p className="m-0">
                                             <small>{user?.email}</small>
                                         </p>
@@ -115,7 +115,7 @@ const Dashboard = () => {
                         </Navbar>
                     </div>
                     <div
-                        className="col-lg-10 border-start"
+                        className="col-lg-10"
                         style={{ height: "91vh", backgroundColor: "#F4F7FC" }}
                     >
                         <Outlet></Outlet>
