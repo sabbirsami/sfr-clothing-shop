@@ -4,16 +4,23 @@ import { Link } from "react-router-dom";
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
 import Loading from "./Loading";
 import toast from "react-hot-toast";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 
 const ShippingBag = () => {
+    const [user, loading, error] = useAuthState(auth);
+
     const {
         data: orders,
         isLoading,
         refetch,
     } = useQuery("orders", () =>
-        fetch("http://localhost:5000/orders").then((res) => res.json())
+        fetch(`http://localhost:5000/orders/${user?.email}`, {
+            method: "GET",
+        }).then((res) => res.json())
     );
-    if (isLoading) {
+    console.log(orders);
+    if (isLoading || loading) {
         return <Loading />;
     }
 
