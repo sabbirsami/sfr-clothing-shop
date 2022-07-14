@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
@@ -9,9 +9,8 @@ import auth from "../../firebase.init";
 
 const ShippingBag = () => {
     const [user, loading, error] = useAuthState(auth);
-
     const {
-        data: orders,
+        data: allOrders,
         isLoading,
         refetch,
     } = useQuery("orders", () =>
@@ -19,7 +18,7 @@ const ShippingBag = () => {
             method: "GET",
         }).then((res) => res.json())
     );
-    console.log(orders);
+
     if (isLoading || loading) {
         return <Loading />;
     }
@@ -43,7 +42,7 @@ const ShippingBag = () => {
                         <div className="py-5 px-3">
                             <div className="d-flex align-items-center border-bottom justify-content-between pb-4">
                                 <h2>Shopping Cart</h2>
-                                <h2>2 Items</h2>
+                                <h2>{allOrders.count} Items</h2>
                             </div>
                             <div className="">
                                 <div
@@ -66,7 +65,7 @@ const ShippingBag = () => {
                                         REMOVE
                                     </div>
                                 </div>
-                                {orders.map((order) => (
+                                {allOrders.orders.map((order) => (
                                     <div className="">
                                         <div className="row bg-light py-2 mb-1 rounded-3 align-items-center justify-content-between">
                                             <div className="col-4">
@@ -129,8 +128,8 @@ const ShippingBag = () => {
                                 <h2>Order Summary</h2>
                             </div>
                             <div className="d-flex align-items-center mb-3 fw-semibold justify-content-between pt-4">
-                                <p>3 ITEMS</p>
-                                <p>$666</p>
+                                <p>{allOrders.count} ITEMS</p>
+                                <p>${allOrders.totalFinal}</p>
                             </div>
                             <div className="mb-3">
                                 <p className="fw-semibold mb-1">SHIPPING</p>
@@ -154,7 +153,7 @@ const ShippingBag = () => {
                             <hr className="mt-5 mb-4" />
                             <div className="d-flex align-items-center mb-3 fw-semibold justify-content-between">
                                 <p>TOTAL COST</p>
-                                <p>$663</p>
+                                <p>${allOrders.totalFinal + 3}</p>
                             </div>
                             <button
                                 className="btn w-100 rounded-0 text-white"

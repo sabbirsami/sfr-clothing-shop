@@ -55,6 +55,7 @@ const Cart = () => {
             email: user.email,
             name: name,
             price: price,
+            total: parseFloat(price) * orderQuantity,
             quantity: orderQuantity,
             image: image,
         };

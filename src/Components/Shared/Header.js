@@ -3,6 +3,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../../Images/logo.png";
 import { BsCart3 } from "react-icons/bs";
 import CustomLink from "./CustomLink";
+import { useQuery } from "react-query";
 import auth from "../../firebase.init";
 import { useAuthState } from "react-firebase-hooks/auth";
 import Loading from "./Loading";
@@ -10,7 +11,17 @@ import { signOut } from "firebase/auth";
 
 const Header = () => {
     const [user, loading, error] = useAuthState(auth);
-    if (loading) {
+    const {
+        data: allOrders,
+        isLoading,
+        refetch,
+    } = useQuery("orders", () =>
+        fetch(`http://localhost:5000/orders/${user?.email}`, {
+            method: "GET",
+        }).then((res) => res.json())
+    );
+
+    if (isLoading || loading) {
         return <Loading />;
     }
     const logout = () => {
@@ -47,8 +58,17 @@ const Header = () => {
                             ) : (
                                 <CustomLink to="/login">LOG IN</CustomLink>
                             )}
-                            <CustomLink to="/shipping-bag">
-                                <BsCart3 className="mb-1 fw-semibold fs-5" />
+                            <CustomLink
+                                to="/shipping-bag"
+                                className="position-relative pb-3 rounded-pill  ms-2 pe-2"
+                            >
+                                <BsCart3 className="mt-2 ms-2 fw-semibold fs-5" />
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    {allOrders.count}
+                                    <span class="visually-hidden">
+                                        unread messages
+                                    </span>
+                                </span>
                             </CustomLink>
                         </Nav>
                     </Navbar.Collapse>
