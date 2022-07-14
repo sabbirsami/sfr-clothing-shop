@@ -14,6 +14,7 @@ import { Toaster } from "react-hot-toast";
 import Login from "./Components/Shared/Login";
 import SignUp from "./Components/Shared/SignUp";
 import RequireAuth from "./Components/Shared/RequireAuth";
+import Dashboard from "./Components/Dashboard/Dashboard";
 
 function App() {
     return (
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/blogs" element={<Blogs />}></Route>
                 <Route path="/about" element={<About />}></Route>
                 <Route path="/contact" element={<Contact />}></Route>
+                <Route path="/dashboard" element={<Dashboard />}></Route>
                 <Route
                     path="/shipping-bag"
                     element={

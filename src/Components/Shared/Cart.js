@@ -11,7 +11,11 @@ import auth from "../../firebase.init";
 const Cart = () => {
     const { id } = useParams();
     const [user, loading, error] = useAuthState(auth);
-    const { data: product, isLoading } = useQuery("product", () =>
+    const {
+        data: product,
+        isLoading,
+        refetch,
+    } = useQuery("product", () =>
         fetch(`http://localhost:5000/products/${id}`).then((res) => res.json())
     );
     const [orderQuantity, setOrderQuantity] = useState(1);
@@ -71,6 +75,7 @@ const Cart = () => {
             .then((data) => {
                 toast.success("Successfully added!");
                 console.log("Success:", data);
+                refetch();
             })
             .catch((error) => {
                 console.error("Error:", error);

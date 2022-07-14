@@ -48,10 +48,11 @@ const Header = () => {
                             <CustomLink to="/blogs">BLOGS</CustomLink>
                             <CustomLink to="/about">ABOUT US</CustomLink>
                             <CustomLink to="/contact">CONTACT</CustomLink>
+                            <CustomLink to="/dashboard">DASHBOARD</CustomLink>
                             {user ? (
                                 <button
                                     onClick={logout}
-                                    className="btn p-0 border-0 btn-outline-none"
+                                    className="btn fw-semibold p-0 border-0 btn-outline-none"
                                 >
                                     LOG OUT
                                 </button>

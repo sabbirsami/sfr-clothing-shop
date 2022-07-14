@@ -1,5 +1,6 @@
 import React from "react";
 import { BsCart3 } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
     return (
@@ -16,12 +17,20 @@ const Hero = () => {
                                 Shop today and get{" "}
                                 <span className="text-dark">20% discount</span>
                             </p>
-                            <div className="d-inline px-3  py-2 border-1 border border-primary">
-                                <button className="btn mb-lg-5 mb-5 border-3 btn-primary text-white border-success px-4 py-2 rounded-0">
-                                    Shop Now{" "}
-                                    <BsCart3 className="mb-1 ms-2 fw-semibold fs-5" />
-                                </button>
-                            </div>
+
+                            <button className="btn mb-lg-5 mb-5 border-3 btn-primary text-white border-success px-4 py-2 rounded-0">
+                                Shop Now{" "}
+                                <BsCart3 className="mb-1 ms-2 fw-semibold fs-5" />
+                            </button>
+                            <button className="btn mb-lg-5 mb-5 border-3 btn-outline-primary  px-4 py-2 ms-3 rounded-0">
+                                <Link
+                                    to="/contact"
+                                    className="text-decoration-none"
+                                >
+                                    {" "}
+                                    Contact us
+                                </Link>
+                            </button>
                         </div>
                     </div>
                 </div>

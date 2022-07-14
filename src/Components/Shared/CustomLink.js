@@ -10,7 +10,7 @@ const CustomLink = ({ children, to, ...props }) => {
                 className="nav-link px-2 py-2 fw-regular"
                 style={{
                     color: match ? "#107aea" : "#000000",
-                    fontWeight: match ? "500" : "400",
+                    fontWeight: match ? "500" : "500",
                 }}
                 to={to}
                 {...props}
