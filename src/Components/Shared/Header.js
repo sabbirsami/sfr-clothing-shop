@@ -10,11 +10,11 @@ import Loading from "./Loading";
 import { signOut } from "firebase/auth";
 
 const Header = () => {
-    const [user, loading, error] = useAuthState(auth);
+    const [user, loading] = useAuthState(auth);
     const {
         data: allOrders,
         isLoading,
-        refetch,
+        // refetch,
     } = useQuery("orders", () =>
         fetch(`http://localhost:5000/orders/${user?.email}`, {
             method: "GET",

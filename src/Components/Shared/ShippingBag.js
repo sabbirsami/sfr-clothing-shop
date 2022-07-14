@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
@@ -9,7 +9,7 @@ import auth from "../../firebase.init";
 import Header from "./Header";
 
 const ShippingBag = () => {
-    const [user, loading, error] = useAuthState(auth);
+    const [user, loading] = useAuthState(auth);
     const {
         data: allOrders,
         isLoading,

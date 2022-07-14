@@ -11,7 +11,7 @@ import Header from "./Header";
 
 const Cart = () => {
     const { id } = useParams();
-    const [user, loading, error] = useAuthState(auth);
+    const [user, loading] = useAuthState(auth);
     const {
         data: product,
         isLoading,
@@ -20,7 +20,7 @@ const Cart = () => {
         fetch(`http://localhost:5000/products/${id}`).then((res) => res.json())
     );
     const [orderQuantity, setOrderQuantity] = useState(1);
-    const { productImage, setProductImage } = useState("");
+    // const { productImage, setProductImage } = useState("");
 
     if (isLoading || loading) {
         return <p>Loading..</p>;
@@ -50,9 +50,9 @@ const Cart = () => {
             setOrderQuantity(orderQuantity + 1);
         }
     };
-    const handleSetProductImage = (image) => {
-        setProductImage(image);
-    };
+    // const handleSetProductImage = (image) => {
+    //     setProductImage(image);
+    // };
 
     const handleAddToCart = () => {
         const order = {
@@ -99,9 +99,9 @@ const Cart = () => {
                             </div>
                             <div className="d-flex">
                                 <button
-                                    onClick={() =>
-                                        handleSetProductImage(image_2)
-                                    }
+                                    // onClick={() =>
+                                    //     handleSetProductImage(image_2)
+                                    // }
                                     className="btn p-0 m-0 btn-outline-none border-0"
                                 >
                                     <div className="p-2 bg-light m-1 rounded">
