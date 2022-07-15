@@ -14,13 +14,18 @@ import Login from "./Components/Shared/Login";
 import SignUp from "./Components/Shared/SignUp";
 import RequireAuth from "./Components/Shared/RequireAuth";
 import Dashboard from "./Components/Dashboard/Dashboard";
+import AllProduct from "./Components/Shop/AllProduct";
+import AllCloth from "./Components/Shared/AllCloth";
 
 function App() {
     return (
         <div className="App">
             <Routes>
                 <Route path="/" element={<Home />}></Route>
-                <Route path="/shop" element={<Shop />}></Route>
+                <Route path="/shop" element={<Shop />}>
+                    <Route index element={<AllProduct />}></Route>
+                    <Route path="cloth" element={<AllCloth />}></Route>
+                </Route>
                 <Route path="/blogs" element={<Blogs />}></Route>
                 <Route path="/about" element={<About />}></Route>
                 <Route path="/contact" element={<Contact />}></Route>
