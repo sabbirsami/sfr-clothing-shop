@@ -26,12 +26,16 @@ const Categories = () => {
                         className="col-lg-4  mt-2 border-end bg-gradient border-light border-3 "
                         style={{ backgroundColor: "#EFEFEF" }}
                     >
-                        <div className="d-flex justify-content-around align-items-center pb-2 ps-3">
+                        <div className="d-flex justify-content-around align-items-center ps-3">
                             <div className="">
-                                <h2 className="m-0">Cloth</h2>
+                                <h2 className="m-0">Bags</h2>
                             </div>
                             <div className="w-25">
-                                <img className="w-100 p-2" src={bag} alt="" />
+                                <img
+                                    className="w-100 p-2 mt-1"
+                                    src={bag}
+                                    alt=""
+                                />
                             </div>
                         </div>
                     </div>
@@ -39,9 +43,9 @@ const Categories = () => {
                         className="col-lg-4  mt-2 border-end bg-gradient border-light border-3 "
                         style={{ backgroundColor: "#EFEFEF" }}
                     >
-                        <div className="d-flex justify-content-around align-items-center pb-2 ps-3">
+                        <div className="d-flex justify-content-around align-items-center ps-3">
                             <div className="">
-                                <h2 className="m-0">Cloth</h2>
+                                <h2 className="m-0">Shoes</h2>
                             </div>
                             <div className="w-25">
                                 <img className="w-100" src={shoe} alt="" />

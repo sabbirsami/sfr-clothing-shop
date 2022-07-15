@@ -26,19 +26,8 @@ const Cart = () => {
         return <p>Loading..</p>;
     }
 
-    const {
-        name,
-        price,
-        brand,
-        quantity,
-        description,
-        image,
-        image_1,
-        image_2,
-        image_3,
-        image_4,
-        details,
-    } = product[0];
+    const { name, price, brand, stock, description, image, details } =
+        product[0];
 
     const subtractOrderQuantity = () => {
         if (orderQuantity > 1) {
@@ -46,7 +35,7 @@ const Cart = () => {
         }
     };
     const addOrderQuantity = () => {
-        if (orderQuantity < quantity) {
+        if (orderQuantity < stock) {
             setOrderQuantity(orderQuantity + 1);
         }
     };
@@ -97,49 +86,6 @@ const Cart = () => {
                                     alt=""
                                 />
                             </div>
-                            <div className="d-flex">
-                                <button
-                                    // onClick={() =>
-                                    //     handleSetProductImage(image_2)
-                                    // }
-                                    className="btn p-0 m-0 btn-outline-none border-0"
-                                >
-                                    <div className="p-2 bg-light m-1 rounded">
-                                        <img
-                                            className="img-fluid rounded-2"
-                                            src={image_2}
-                                            alt=""
-                                        />
-                                    </div>
-                                </button>
-                                <button className="btn p-0 m-0 btn-outline-none border-0">
-                                    <div className="p-2 bg-light m-1 rounded">
-                                        <img
-                                            className="img-fluid rounded-2"
-                                            src={image_3}
-                                            alt=""
-                                        />
-                                    </div>
-                                </button>
-                                <button className="btn p-0 m-0 btn-outline-none border-0">
-                                    <div className="p-2 bg-light m-1 rounded">
-                                        <img
-                                            className="img-fluid rounded-2"
-                                            src={image_1}
-                                            alt=""
-                                        />
-                                    </div>
-                                </button>
-                                <button className="btn p-0 m-0 btn-outline-none border-0">
-                                    <div className="p-2 bg-light m-1 rounded">
-                                        <img
-                                            className="img-fluid rounded-2"
-                                            src={image_4}
-                                            alt=""
-                                        />
-                                    </div>
-                                </button>
-                            </div>
                         </div>
                         <div className="col-lg-7">
                             <div className="p-lg-4">
@@ -148,7 +94,7 @@ const Cart = () => {
                                 {/* <p className="mb-0">Price</p> */}
                                 <h1>${price}</h1>
                                 <p className=" fw-semibold mb-4 fs-6">
-                                    Stock: {quantity}
+                                    Stock: {stock}
                                 </p>
                                 <div className="d-flex ">
                                     <div className="col-2">
