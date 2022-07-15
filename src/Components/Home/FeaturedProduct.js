@@ -1,8 +1,10 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { HiOutlineMinus } from "react-icons/hi";
+import { IoArrowForwardCircle } from "react-icons/io5";
 import Product from "./Product";
 import Loading from "../Shared/Loading";
+import { Link } from "react-router-dom";
 
 const FeaturedProduct = () => {
     const { data: products, isLoading } = useQuery("products", () =>
@@ -27,7 +29,14 @@ const FeaturedProduct = () => {
                             <Product key={index} product={product} />
                         ))}
                     </div>
-                    <p className="text-center fs-5 fw-light pt-4">Show All</p>
+                    <p className="text-center fs-5 fw-light">
+                        <Link
+                            to={"/shop"}
+                            className="text-warning text-decoration-none"
+                        >
+                            See All <IoArrowForwardCircle />
+                        </Link>
+                    </p>
                 </div>
             </div>
         </div>

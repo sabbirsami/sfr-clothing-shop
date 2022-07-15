@@ -1,5 +1,6 @@
 import React from "react";
 import { useQuery } from "react-query";
+import { Link } from "react-router-dom";
 import Product from "../Home/Product";
 import Loading from "./Loading";
 
@@ -19,7 +20,12 @@ const Shoes = () => {
             <div className="container pt-4">
                 <p className="d-flex align-items-center justify-content-between">
                     <h1 className="display-6">Shoes</h1>
-                    <p className="text-warning">See All</p>
+                    <Link
+                        to={"/shop"}
+                        className="text-warning text-decoration-none"
+                    >
+                        See All
+                    </Link>
                 </p>
                 <div className="row"></div>
             </div>
