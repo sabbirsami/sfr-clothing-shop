@@ -14,21 +14,20 @@ const FeaturedProduct = () => {
 
     return (
         <div>
-            <div className="container py-5">
-                <div className="py-3 text-center">
+            <div className="container pb-5">
+                <div className="pt-3 pb-2">
                     <h1 className="display-5">Featured Products</h1>
                     <p className="fs-4 fw-light">
-                        <HiOutlineMinus /> Summer Collection New Modern Design{" "}
-                        <HiOutlineMinus />
+                        Summer Collection New Modern Design <HiOutlineMinus />
                     </p>
                 </div>
                 <div className="py-3">
                     <div className="row">
-                        {products.slice(0, 8).map((product, index) => (
+                        {products.slice(1, 5).map((product, index) => (
                             <Product key={index} product={product} />
                         ))}
                     </div>
-                    <p className="text-center fs-5 fw-light pt-4">Load More</p>
+                    <p className="text-center fs-5 fw-light pt-4">Show All</p>
                 </div>
             </div>
         </div>

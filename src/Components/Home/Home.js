@@ -19,9 +19,9 @@ const Home = () => {
             <Cloth />
             <Shoes />
             <Bags />
-            <FeaturedProduct />
             <Benefit />
             <Offer />
+            <FeaturedProduct />
             <Newsletter />
         </>
     );
