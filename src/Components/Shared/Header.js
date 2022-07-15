@@ -3,6 +3,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../../Images/logo.png";
 import { BsCart3 } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
+import { GoPrimitiveDot } from "react-icons/go";
 import CustomLink from "./CustomLink";
 import { useQuery } from "react-query";
 import Button from "react-bootstrap/Button";
@@ -86,48 +87,55 @@ const Header = () => {
                                 closeButton
                             ></Modal.Header>
                             <Modal.Body className="d-flex align-items-center">
-                                <Nav className="mx-auto text-center">
+                                <Nav className="mx-auto text-start pe-5">
                                     <CustomLink
-                                        className="fs-2 text-decoration-none pb-2"
+                                        className="display-6 item-hover text-decoration-none pb-2"
                                         to="/"
                                     >
-                                        Home
+                                        <GoPrimitiveDot className="visually-hidden" />{" "}
+                                        HOME
                                     </CustomLink>
+
                                     <CustomLink
-                                        className="fs-2 text-decoration-none pb-2"
-                                        to="/dashboard"
-                                    >
-                                        Dashboard
-                                    </CustomLink>
-                                    <CustomLink
-                                        className="fs-2 text-decoration-none pb-2"
+                                        className="display-6 item-hover text-decoration-none pb-2"
                                         to="/shop"
                                     >
-                                        Shop
+                                        <GoPrimitiveDot className="visually-hidden" />{" "}
+                                        SHOP
                                     </CustomLink>
                                     <CustomLink
-                                        className="fs-2 text-decoration-none pb-2"
+                                        className="display-6 item-hover text-decoration-none pb-2"
                                         to="/blogs"
                                     >
-                                        Blogs
+                                        <GoPrimitiveDot className="visually-hidden" />{" "}
+                                        BLOGS
                                     </CustomLink>
                                     <CustomLink
-                                        className="fs-2 text-decoration-none pb-2"
+                                        className="display-6 item-hover text-decoration-none pb-2"
                                         to="/about"
                                     >
-                                        About
+                                        <GoPrimitiveDot className="visually-hidden" />{" "}
+                                        ABOUT
                                     </CustomLink>
                                     <CustomLink
-                                        className="fs-2 text-decoration-none pb-2"
+                                        className="display-6 item-hover text-decoration-none pb-2"
                                         to="/contact"
                                     >
-                                        Contact
+                                        <GoPrimitiveDot className="visually-hidden" />{" "}
+                                        CONTACT
+                                    </CustomLink>
+                                    <CustomLink
+                                        className="display-6 item-hover text-decoration-none pb-2"
+                                        to="/dashboard"
+                                    >
+                                        <GoPrimitiveDot className="visually-hidden" />{" "}
+                                        DASHBOARD
                                     </CustomLink>
 
                                     {user ? (
                                         <button
                                             onClick={logout}
-                                            className="btn fs-2 fw-semibold p-0 border-0 btn-outline-none"
+                                            className="btn fs-2 mt-5  fw-semibold p-0 rounded-0 btn-outline-danger"
                                         >
                                             LOG OUT
                                         </button>

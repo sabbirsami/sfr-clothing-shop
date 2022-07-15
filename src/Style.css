@@ -23,6 +23,10 @@ body {
     background-size: cover;
     height: 100%;
 }
+.item-hover:hover {
+    font-size: 45px;
+    visibility: inherit;
+}
 .contact-bg {
     background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(0, 0, 0, 0.45)),
         url("./Images/products/banner/b8.jpg");

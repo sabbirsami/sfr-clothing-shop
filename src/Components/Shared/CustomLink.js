@@ -6,10 +6,10 @@ const CustomLink = ({ children, to, ...props }) => {
     let match = useMatch({ path: resolved.pathname, end: true });
     return (
         <Link
-            className="nav-link px-2 py-2 fw-regular"
+            className="nav-link px-5 py-2 fw-regular"
             style={{
                 color: match ? "#107aea" : "#000000",
-                fontWeight: match ? "500" : "500",
+                fontWeight: match ? "400" : "400",
             }}
             to={to}
             {...props}

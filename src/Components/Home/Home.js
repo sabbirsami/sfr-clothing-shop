@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Shared/Header";
+import Shoes from "../Shared/Shoes";
 import Benefit from "./Benefit";
 import Categories from "./Categories";
 import FeaturedProduct from "./FeaturedProduct";
@@ -13,6 +14,7 @@ const Home = () => {
             <Header />
             <Hero />
             <Categories />
+            <Shoes />
             <FeaturedProduct />
             <Benefit />
             <Offer />
