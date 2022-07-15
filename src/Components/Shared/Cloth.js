@@ -8,7 +8,7 @@ const Cloth = () => {
         data: products,
         isLoading,
         refetch,
-    } = useQuery("categoryProduct", () =>
+    } = useQuery("categoryCloths", () =>
         fetch(`http://localhost:5000/allproducts/cloth`, {
             method: "GET",
         }).then((res) => res.json())

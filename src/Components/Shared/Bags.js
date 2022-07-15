@@ -3,13 +3,13 @@ import { useQuery } from "react-query";
 import Product from "../Home/Product";
 import Loading from "./Loading";
 
-const Shoes = () => {
+const Bags = () => {
     const {
         data: products,
         isLoading,
         refetch,
-    } = useQuery("categoryShoes", () =>
-        fetch(`http://localhost:5000/allproducts/shoe`, {
+    } = useQuery("categoryBags", () =>
+        fetch(`http://localhost:5000/allproducts/Bag`, {
             method: "GET",
         }).then((res) => res.json())
     );
@@ -22,7 +22,7 @@ const Shoes = () => {
         <div>
             <div className="container pt-4">
                 <p className="d-flex align-items-center justify-content-between">
-                    <h1 className="display-6">Shoes</h1>
+                    <h1 className="display-6">Bags</h1>
                     <p className="text-warning">See All</p>
                 </p>
                 <div className="row"></div>
@@ -40,4 +40,4 @@ const Shoes = () => {
     );
 };
 
-export default Shoes;
+export default Bags;
