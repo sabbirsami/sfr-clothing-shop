@@ -16,6 +16,8 @@ import RequireAuth from "./Components/Shared/RequireAuth";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import AllProduct from "./Components/Shop/AllProduct";
 import AllCloth from "./Components/Shared/AllCloth";
+import AllShoe from "./Components/Shared/AllShoe";
+import AllBag from "./Components/Shared/AllBag";
 
 function App() {
     return (
@@ -25,6 +27,8 @@ function App() {
                 <Route path="/shop" element={<Shop />}>
                     <Route index element={<AllProduct />}></Route>
                     <Route path="cloth" element={<AllCloth />}></Route>
+                    <Route path="bags" element={<AllBag />}></Route>
+                    <Route path="shoes" element={<AllShoe />}></Route>
                 </Route>
                 <Route path="/blogs" element={<Blogs />}></Route>
                 <Route path="/about" element={<About />}></Route>

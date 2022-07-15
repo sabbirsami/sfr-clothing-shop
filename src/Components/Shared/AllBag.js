@@ -3,13 +3,13 @@ import { useQuery } from "react-query";
 import Product from "../Home/Product";
 import Loading from "./Loading";
 
-const AllShoe = () => {
+const AllBag = () => {
     const {
         data: products,
         isLoading,
         refetch,
-    } = useQuery("categoryShoes", () =>
-        fetch(`http://localhost:5000/allproducts/shoe`, {
+    } = useQuery("categoryBags", () =>
+        fetch(`http://localhost:5000/allproducts/Bag`, {
             method: "GET",
         }).then((res) => res.json())
     );
@@ -37,4 +37,4 @@ const AllShoe = () => {
     );
 };
 
-export default AllShoe;
+export default AllBag;
