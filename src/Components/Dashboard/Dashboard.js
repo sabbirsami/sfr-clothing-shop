@@ -83,9 +83,9 @@ const Dashboard = () => {
                                         <TbLayoutDashboard className="me-2" />{" "}
                                         Dashboard
                                     </DashboardLink>
-                                    <DashboardLink to="/dashboard/service">
-                                        <FiHardDrive className="me-2" /> Service
-                                        list
+                                    <DashboardLink to="/dashboard/manage-all-product">
+                                        <FiHardDrive className="me-2" />
+                                        Manage Products
                                     </DashboardLink>
                                     <DashboardLink to="/dashboard/manage-order">
                                         <AiOutlineShoppingCart className="me-2" />{" "}
