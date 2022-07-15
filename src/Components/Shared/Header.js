@@ -12,6 +12,7 @@ import auth from "../../firebase.init";
 import { useAuthState } from "react-firebase-hooks/auth";
 import Loading from "./Loading";
 import { signOut } from "firebase/auth";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     const [user, loading] = useAuthState(auth);
@@ -46,11 +47,13 @@ const Header = () => {
                 <Container>
                     <Navbar.Brand className="w-50 m-0" href="">
                         <div className="col-lg-4">
-                            <img
-                                className="img-fluid w-75 pb-2"
-                                src={logo}
-                                alt=""
-                            />
+                            <Link to="/">
+                                <img
+                                    className="img-fluid w-75 pb-2"
+                                    src={logo}
+                                    alt=""
+                                />
+                            </Link>
                         </div>
                     </Navbar.Brand>
                     <div className="d-flex">
