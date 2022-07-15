@@ -4,11 +4,7 @@ import Product from "../Home/Product";
 import Loading from "./Loading";
 
 const AllShoe = () => {
-    const {
-        data: products,
-        isLoading,
-        refetch,
-    } = useQuery("categoryShoes", () =>
+    const { data: products, isLoading } = useQuery("categoryShoes", () =>
         fetch(`http://localhost:5000/allproducts/shoe`, {
             method: "GET",
         }).then((res) => res.json())

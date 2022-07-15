@@ -1,7 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Categories from "../Home/Categories";
-import Product from "../Home/Product";
 import Header from "../Shared/Header";
 
 const Shop = () => {
