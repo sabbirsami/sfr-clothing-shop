@@ -1,4 +1,5 @@
 import React from "react";
+import Cloth from "../Shared/Cloth";
 import Header from "../Shared/Header";
 import Shoes from "../Shared/Shoes";
 import Benefit from "./Benefit";
@@ -14,6 +15,7 @@ const Home = () => {
             <Header />
             <Hero />
             <Categories />
+            <Cloth />
             <Shoes />
             <FeaturedProduct />
             <Benefit />
