@@ -1,21 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import toast from "react-hot-toast";
 import Loading from "../Shared/Loading";
+import Pagination from "react-bootstrap/Pagination";
 
 const ManageAllProduct = () => {
-    const {
-        data: products,
-        refetch,
-        isLoading,
-    } = useQuery("products", () =>
-        fetch(`http://localhost:5000/products`).then((res) => res.json())
-    );
+    const [products, setProducts] = useState([]);
+    const [pageCount, setPageCount] = useState(0);
+    const [page, setPage] = useState(0);
 
-    if (isLoading) {
-        return <Loading />;
-    }
-    console.log(products);
+    useEffect(() => {
+        fetch(`http://localhost:5000/products?page=${page}&size=${10}`)
+            .then((res) => res.json())
+            .then((data) => {
+                setProducts(data);
+            });
+        // refetch();
+    }, [page]);
+    useEffect(() => {
+        fetch("http://localhost:5000/productCount")
+            .then((res) => res.json())
+            .then((data) => {
+                const counts = data.count;
+                const pages = Math.ceil(counts / 10);
+                setPageCount(pages);
+            });
+    }, []);
+
     const handleDelete = (id) => {
         console.log(id);
         fetch(`http://localhost:5000/products/${id}`, {
@@ -26,7 +37,6 @@ const ManageAllProduct = () => {
                 toast.success("Order delete", {
                     duration: 4000,
                 });
-                refetch();
             });
     };
     return (
@@ -67,6 +77,21 @@ const ManageAllProduct = () => {
                         </div>
                     </div>
                 ))}
+            </div>
+            <div className="mt-5">
+                <Pagination className="justify-content-center">
+                    <Pagination.Prev />
+                    {[...Array(pageCount).keys()].map((number, index) => (
+                        <Pagination.Item
+                            key={index}
+                            active={page === number}
+                            onClick={() => setPage(number)}
+                        >
+                            {number}
+                        </Pagination.Item>
+                    ))}
+                    <Pagination.Next />
+                </Pagination>
             </div>
         </div>
     );
