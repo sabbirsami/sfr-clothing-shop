@@ -55,7 +55,7 @@ const Cart = () => {
         };
         console.log(order);
         fetch("http://localhost:5000/orders", {
-            method: "POST",
+            method: "PUT",
             headers: {
                 "Content-Type": "application/json",
             },
