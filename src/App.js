@@ -19,6 +19,7 @@ import AllCloth from "./Components/Shared/AllCloth";
 import AllShoe from "./Components/Shared/AllShoe";
 import AllBag from "./Components/Shared/AllBag";
 import ManageAllProduct from "./Components/Dashboard/ManageAllProduct";
+import AddProduct from "./Components/Dashboard/AddProduct";
 
 function App() {
     return (
@@ -39,6 +40,7 @@ function App() {
                         path="manage-all-product"
                         element={<ManageAllProduct />}
                     ></Route>
+                    <Route path="add-product" element={<AddProduct />}></Route>
                 </Route>
                 <Route
                     path="/shipping-bag"

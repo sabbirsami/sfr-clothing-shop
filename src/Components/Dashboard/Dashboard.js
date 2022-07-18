@@ -87,6 +87,10 @@ const Dashboard = () => {
                                         <FiHardDrive className="me-2" />
                                         Manage Products
                                     </DashboardLink>
+                                    <DashboardLink to="/dashboard/add-product">
+                                        <FiHardDrive className="me-2" />
+                                        Add Product
+                                    </DashboardLink>
                                     <DashboardLink to="/dashboard/manage-order">
                                         <AiOutlineShoppingCart className="me-2" />{" "}
                                         Manage Order
