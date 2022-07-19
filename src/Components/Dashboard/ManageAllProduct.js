@@ -16,7 +16,7 @@ const ManageAllProduct = () => {
                 setProducts(data);
             });
         // refetch();
-    }, [page]);
+    }, [page, products]);
     useEffect(() => {
         fetch("http://localhost:5000/productCount")
             .then((res) => res.json())

@@ -21,7 +21,7 @@ const Shoes = () => {
                 <p className="d-flex align-items-center justify-content-between">
                     <h1 className="display-6">Shoes</h1>
                     <Link
-                        to={"/shop"}
+                        to={"/shop/shoes"}
                         className="text-warning text-decoration-none"
                     >
                         See All

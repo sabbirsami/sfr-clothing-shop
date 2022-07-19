@@ -17,7 +17,7 @@ const AllBag = () => {
     return (
         <div>
             <div className="container pt-4">
-                <h1 className="display-6">Cloths</h1>
+                <h1 className="display-6">Bags</h1>
                 <div className="row"></div>
             </div>
             <div className="container">
