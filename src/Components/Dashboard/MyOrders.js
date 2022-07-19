@@ -11,11 +11,12 @@ const MyOrders = () => {
         data: orders,
         refetch,
         isLoading,
-    } = useQuery("orders", () =>
+    } = useQuery("my-orders", () =>
         fetch(`http://localhost:5000/orders?email=${user?.email}`, {
             method: "GET",
         }).then((res) => res.json())
     );
+    console.log(orders);
     if (isLoading) {
         return <Loading />;
     }
@@ -48,7 +49,7 @@ const MyOrders = () => {
                         <div className="col-1">Pay</div>
                     </div>
                 </div>
-                {orders.map((order) => (
+                {orders?.map((order) => (
                     <div className="m-2 p-3 rounded-2">
                         <div className="row align-items-center">
                             <div className="col-2">
