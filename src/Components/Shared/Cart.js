@@ -91,7 +91,6 @@ const Cart = () => {
                             <div className="p-lg-4">
                                 <h5 className="mb-0">{brand}</h5>
                                 <h1 className="mb-3">{name}</h1>
-                                {/* <p className="mb-0">Price</p> */}
                                 <h1>${price}</h1>
                                 <p className=" fw-semibold mb-4 fs-6">
                                     Stock: {stock}
@@ -131,7 +130,7 @@ const Cart = () => {
                                     </button>
                                 </div>
                                 <p className="mt-3 fw-semibold">{details}</p>
-                                {description.map((des, index) => (
+                                {description?.map((des, index) => (
                                     <li className=" fw-semibold" key={index}>
                                         {des}
                                     </li>

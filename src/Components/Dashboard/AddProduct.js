@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { Button, Col, Form, InputGroup, Row } from "react-bootstrap";
 
 const AddProduct = () => {
-    const [validated, setValidated] = useState(false);
     const {
         register,
         handleSubmit,
@@ -12,8 +11,18 @@ const AddProduct = () => {
     } = useForm();
 
     const onSubmit = (data) => {
-        console.log(data);
-        reset();
+        fetch("http://localhost:5000/products", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(data),
+        })
+            .then((res) => res.json())
+            .then((result) => {
+                console.log(result);
+                reset();
+            });
     };
 
     return (
@@ -25,11 +34,7 @@ const AddProduct = () => {
                         style={{ backgroundColor: "#F5F6FA" }}
                     >
                         <div className="row rounded-3">
-                            <Form
-                                noValidate
-                                validated={validated}
-                                onSubmit={handleSubmit(onSubmit)}
-                            >
+                            <Form onSubmit={handleSubmit(onSubmit)}>
                                 <Row className="mb-3">
                                     <Form.Group
                                         as={Col}
@@ -229,6 +234,17 @@ const AddProduct = () => {
                                         )}
                                     </p>
                                 </Form.Group>
+                                {/* <Form.Group className="mb-3">
+                                    <Form.Label>
+                                        Additional information
+                                    </Form.Label>
+                                    <Form.Check
+                                        required
+                                        label="Agree to terms and conditions"
+                                        feedback="You must agree before submitting."
+                                        feedbackType="invalid"
+                                    />
+                                </Form.Group> */}
 
                                 <Form.Group
                                     className="mb-3"
