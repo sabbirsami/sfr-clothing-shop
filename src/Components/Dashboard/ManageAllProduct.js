@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useQuery } from "react-query";
 import toast from "react-hot-toast";
-import Loading from "../Shared/Loading";
 import Pagination from "react-bootstrap/Pagination";
 
 const ManageAllProduct = () => {
