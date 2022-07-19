@@ -20,6 +20,7 @@ import AllShoe from "./Components/Shared/AllShoe";
 import AllBag from "./Components/Shared/AllBag";
 import ManageAllProduct from "./Components/Dashboard/ManageAllProduct";
 import AddProduct from "./Components/Dashboard/AddProduct";
+import MyOrders from "./Components/Dashboard/MyOrders";
 import ManageOrders from "./Components/Dashboard/ManageOrders";
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
                         element={<ManageAllProduct />}
                     ></Route>
                     <Route path="add-product" element={<AddProduct />}></Route>
+                    <Route path="my-order" element={<MyOrders />}></Route>
                     <Route
                         path="manage-order"
                         element={<ManageOrders />}
