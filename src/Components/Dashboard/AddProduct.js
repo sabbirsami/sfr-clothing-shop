@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button, Col, Form, InputGroup, Row } from "react-bootstrap";
+import toast from "react-hot-toast";
 
 const AddProduct = () => {
+    const imageUploadKey = "4890ef86cb137afcf283d9e2b184076a";
     const {
         register,
         handleSubmit,
@@ -10,18 +12,43 @@ const AddProduct = () => {
         formState: { errors },
     } = useForm();
 
-    const onSubmit = (data) => {
-        fetch("http://localhost:5000/products", {
+    const onSubmit = async (data) => {
+        const image = data.image[0];
+        const formData = new FormData();
+        formData.append("image", image);
+        const url = `https://api.imgbb.com/1/upload?key=${imageUploadKey}`;
+        fetch(url, {
             method: "POST",
-            headers: {
-                "content-type": "application/json",
-            },
-            body: JSON.stringify(data),
+            body: formData,
         })
             .then((res) => res.json())
-            .then((result) => {
-                console.log(result);
-                reset();
+            .then((imageResult) => {
+                if (imageResult.success) {
+                    const image = imageResult.data.url;
+                    const product = {
+                        name: data.name,
+                        price: data.price,
+                        email: data.email,
+                        brand: data.brand,
+                        category: data.category,
+                        stock: data.stock,
+                        details: data.details,
+                        image: image,
+                    };
+                    fetch("http://localhost:5000/products", {
+                        method: "POST",
+                        headers: {
+                            "content-type": "application/json",
+                        },
+                        body: JSON.stringify(product),
+                    })
+                        .then((res) => res.json())
+                        .then((result) => {
+                            console.log(result);
+                            toast.success("Successfully added");
+                            reset();
+                        });
+                }
             });
     };
 
@@ -197,7 +224,7 @@ const AddProduct = () => {
                                             required
                                         >
                                             <option value="cloth">cloth</option>
-                                            <option value="Bags">Bags</option>
+                                            <option value="Bags">Bag</option>
                                             <option value="shoe">shoe</option>
                                         </Form.Select>
                                         <p className="text-danger mb-0">
