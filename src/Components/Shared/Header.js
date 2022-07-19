@@ -31,7 +31,7 @@ const Header = () => {
     );
 
     if (isLoading || loading) {
-        return <Loading />;
+        return <p>.</p>;
     }
     const logout = () => {
         signOut(auth);
