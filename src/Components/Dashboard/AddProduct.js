@@ -1,18 +1,21 @@
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import { Button, Col, Form, InputGroup, Row } from "react-bootstrap";
 
 const AddProduct = () => {
     const [validated, setValidated] = useState(false);
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors },
+    } = useForm();
 
-    const handleSubmit = (event) => {
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
-
-        setValidated(true);
+    const onSubmit = (data) => {
+        console.log(data);
+        reset();
     };
+
     return (
         <div>
             <div>
@@ -25,7 +28,7 @@ const AddProduct = () => {
                             <Form
                                 noValidate
                                 validated={validated}
-                                onSubmit={handleSubmit}
+                                onSubmit={handleSubmit(onSubmit)}
                             >
                                 <Row className="mb-3">
                                     <Form.Group
@@ -35,13 +38,25 @@ const AddProduct = () => {
                                     >
                                         <Form.Label>Product Name</Form.Label>
                                         <Form.Control
+                                            {...register("name", {
+                                                required: {
+                                                    value: true,
+                                                    message:
+                                                        "Please enter your product name",
+                                                },
+                                            })}
                                             required
                                             type="text"
                                             placeholder="Product name"
                                         />
-                                        <Form.Control.Feedback>
-                                            Looks good!
-                                        </Form.Control.Feedback>
+                                        <p className="text-danger mb-0">
+                                            {errors.name?.type ===
+                                                "required" && (
+                                                <small className="text-danger">
+                                                    {errors.name.message}
+                                                </small>
+                                            )}
+                                        </p>
                                     </Form.Group>
                                     <Form.Group
                                         as={Col}
@@ -50,13 +65,25 @@ const AddProduct = () => {
                                     >
                                         <Form.Label>Brand Name</Form.Label>
                                         <Form.Control
+                                            {...register("brand", {
+                                                required: {
+                                                    value: true,
+                                                    message:
+                                                        "Please enter your brand name",
+                                                },
+                                            })}
                                             required
                                             type="text"
                                             placeholder="Brand name"
                                         />
-                                        <Form.Control.Feedback>
-                                            Looks good!
-                                        </Form.Control.Feedback>
+                                        <p className="text-danger mb-0">
+                                            {errors.brand?.type ===
+                                                "required" && (
+                                                <small className="text-danger">
+                                                    {errors.brand.message}
+                                                </small>
+                                            )}
+                                        </p>
                                     </Form.Group>
                                     <Form.Group
                                         as={Col}
@@ -69,14 +96,26 @@ const AddProduct = () => {
                                                 $
                                             </InputGroup.Text>
                                             <Form.Control
+                                                {...register("price", {
+                                                    required: {
+                                                        value: true,
+                                                        message:
+                                                            "Please enter your product price",
+                                                    },
+                                                })}
                                                 type="number"
                                                 placeholder="Price"
                                                 aria-describedby="inputGroupPrepend"
                                                 required
                                             />
-                                            <Form.Control.Feedback type="invalid">
-                                                Please add product price.
-                                            </Form.Control.Feedback>
+                                            <p className="text-danger mb-0">
+                                                {errors.price?.type ===
+                                                    "required" && (
+                                                    <small className="text-danger">
+                                                        {errors.price.message}
+                                                    </small>
+                                                )}
+                                            </p>
                                         </InputGroup>
                                     </Form.Group>
                                 </Row>
@@ -88,13 +127,25 @@ const AddProduct = () => {
                                     >
                                         <Form.Label>Email</Form.Label>
                                         <Form.Control
+                                            {...register("email", {
+                                                required: {
+                                                    value: true,
+                                                    message:
+                                                        "Please enter your email",
+                                                },
+                                            })}
                                             type="email"
                                             placeholder="Email"
                                             required
                                         />
-                                        <Form.Control.Feedback type="invalid">
-                                            Please provide your email address.
-                                        </Form.Control.Feedback>
+                                        <p className="text-danger mb-0">
+                                            {errors.email?.type ===
+                                                "required" && (
+                                                <small className="text-danger">
+                                                    {errors.email.message}
+                                                </small>
+                                            )}
+                                        </p>
                                     </Form.Group>
                                     <Form.Group
                                         as={Col}
@@ -103,13 +154,25 @@ const AddProduct = () => {
                                     >
                                         <Form.Label>Stock</Form.Label>
                                         <Form.Control
+                                            {...register("stock", {
+                                                required: {
+                                                    value: true,
+                                                    message:
+                                                        "Please enter number of stock",
+                                                },
+                                            })}
                                             type="number"
                                             placeholder="stock"
                                             required
                                         />
-                                        <Form.Control.Feedback type="invalid">
-                                            Please add number of stock.
-                                        </Form.Control.Feedback>
+                                        <p className="text-danger mb-0">
+                                            {errors.stock?.type ===
+                                                "required" && (
+                                                <small className="text-danger">
+                                                    {errors.stock.message}
+                                                </small>
+                                            )}
+                                        </p>
                                     </Form.Group>
                                     <Form.Group
                                         as={Col}
@@ -118,16 +181,28 @@ const AddProduct = () => {
                                     >
                                         <Form.Label>Select Category</Form.Label>
                                         <Form.Select
+                                            {...register("category", {
+                                                required: {
+                                                    value: true,
+                                                    message:
+                                                        "Please select product category",
+                                                },
+                                            })}
                                             aria-label="Default select example"
                                             required
                                         >
-                                            <option value="1">cloth</option>
-                                            <option value="2">Bags</option>
-                                            <option value="3">shoe</option>
+                                            <option value="cloth">cloth</option>
+                                            <option value="Bags">Bags</option>
+                                            <option value="shoe">shoe</option>
                                         </Form.Select>
-                                        <Form.Control.Feedback type="invalid">
-                                            Please select product category.
-                                        </Form.Control.Feedback>
+                                        <p className="text-danger mb-0">
+                                            {errors.category?.type ===
+                                                "required" && (
+                                                <small className="text-danger">
+                                                    {errors.category.message}
+                                                </small>
+                                            )}
+                                        </p>
                                     </Form.Group>
                                 </Row>
                                 <Form.Group
@@ -135,7 +210,24 @@ const AddProduct = () => {
                                     className="mb-3"
                                 >
                                     <Form.Label>Product image</Form.Label>
-                                    <Form.Control type="file" required />
+                                    <Form.Control
+                                        {...register("image", {
+                                            required: {
+                                                value: true,
+                                                message:
+                                                    "Please enter product image",
+                                            },
+                                        })}
+                                        type="file"
+                                        required
+                                    />
+                                    <p className="text-danger mb-0">
+                                        {errors.image?.type === "required" && (
+                                            <small className="text-danger">
+                                                {errors.image.message}
+                                            </small>
+                                        )}
+                                    </p>
                                 </Form.Group>
 
                                 <Form.Group
@@ -144,13 +236,25 @@ const AddProduct = () => {
                                 >
                                     <Form.Label>Details</Form.Label>
                                     <Form.Control
+                                        {...register("details", {
+                                            required: {
+                                                value: true,
+                                                message:
+                                                    " Please add product details.",
+                                            },
+                                        })}
                                         as="textarea"
                                         required
                                         rows={5}
                                     />
-                                    <Form.Control.Feedback type="invalid">
-                                        Please add details..
-                                    </Form.Control.Feedback>
+                                    <p className="text-danger mb-0">
+                                        {errors.details?.type ===
+                                            "required" && (
+                                            <small className="text-danger">
+                                                {errors.details.message}
+                                            </small>
+                                        )}
+                                    </p>
                                 </Form.Group>
                                 <Button type="submit">Add product</Button>
                             </Form>
