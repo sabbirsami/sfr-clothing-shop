@@ -16,6 +16,7 @@ const ManageOrders = () => {
     if (isLoading) {
         return <p>Loading...</p>;
     }
+    console.log(orders);
     const handleDelete = (id) => {
         console.log(id);
         fetch(`https://sfr-clothing-store.herokuapp.com/orders/${id}`, {
