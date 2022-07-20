@@ -23,9 +23,17 @@ body {
     background-size: cover;
     height: 100%;
 }
+.visually-none {
+    display: none;
+}
+.visually-none:hover {
+    display: inline-block;
+}
 .item-hover:hover {
-    font-size: 45px;
-    visibility: inherit;
+    transform: translateX(20px);
+    transition: 0.7s ease;
+    display: inline;
+    color: black !important;
 }
 .contact-bg {
     background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(0, 0, 0, 0.45)),

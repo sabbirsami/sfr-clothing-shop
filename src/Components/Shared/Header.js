@@ -52,7 +52,7 @@ const Header = () => {
                         <div className="col-lg-4">
                             <Link to="/">
                                 <img
-                                    className="img-fluid w-75 pb-2"
+                                    className="img-fluid w-75 pb-3"
                                     src={logo}
                                     alt=""
                                 />
@@ -67,7 +67,7 @@ const Header = () => {
                             <BsCart3 className=" ms-2 fw-semibold fs-3" />
                             <span class="position-absolute top-0 start-100  badge rounded-pill bg-danger">
                                 {allOrders.count}
-                                <span class="visually-hidden">
+                                <span class="visually-none">
                                     unread messages
                                 </span>
                             </span>
@@ -89,59 +89,64 @@ const Header = () => {
                             onHide={() => setShow(false)}
                         >
                             <Modal.Header
-                                className="border-0"
+                                className="border-0 p-5 m-lg-5 text-dark"
                                 closeButton
                             ></Modal.Header>
-                            <Modal.Body className="d-flex align-items-center">
-                                <Nav className="mx-auto text-start pe-5">
+                            <Modal.Body className="d-flex align-items-start">
+                                <Nav className="mx-auto col-lg-6 text-start pe-5">
                                     <CustomLink
-                                        className="display-6 item-hover text-decoration-none pb-2"
+                                        className="display-6  item-hover text-decoration-none pb-2"
                                         to="/"
                                     >
-                                        <GoPrimitiveDot className="visually-hidden" />{" "}
+                                        <GoPrimitiveDot className="visually-none" />{" "}
                                         HOME
                                     </CustomLink>
-
                                     <CustomLink
-                                        className="display-6 item-hover text-decoration-none pb-2"
-                                        to="/shop"
-                                    >
-                                        <GoPrimitiveDot className="visually-hidden" />{" "}
-                                        SHOP
-                                    </CustomLink>
-                                    <CustomLink
-                                        className="display-6 item-hover text-decoration-none pb-2"
-                                        to="/blogs"
-                                    >
-                                        <GoPrimitiveDot className="visually-hidden" />{" "}
-                                        BLOGS
-                                    </CustomLink>
-                                    <CustomLink
-                                        className="display-6 item-hover text-decoration-none pb-2"
-                                        to="/about"
-                                    >
-                                        <GoPrimitiveDot className="visually-hidden" />{" "}
-                                        ABOUT
-                                    </CustomLink>
-                                    <CustomLink
-                                        className="display-6 item-hover text-decoration-none pb-2"
+                                        className="display-6  item-hover text-decoration-none pb-2"
                                         to="/contact"
                                     >
-                                        <GoPrimitiveDot className="visually-hidden" />{" "}
+                                        <GoPrimitiveDot className="visually-none" />{" "}
                                         CONTACT
                                     </CustomLink>
                                     <CustomLink
-                                        className="display-6 item-hover text-decoration-none pb-2"
+                                        className="display-6  item-hover text-decoration-none pb-2"
+                                        to="/about"
+                                    >
+                                        <GoPrimitiveDot className="visually-none" />{" "}
+                                        ABOUT
+                                    </CustomLink>
+
+                                    <CustomLink
+                                        className="display-6  item-hover text-decoration-none pb-2"
+                                        to="/shop"
+                                    >
+                                        <GoPrimitiveDot className="visually-none" />{" "}
+                                        SHOP
+                                    </CustomLink>
+
+                                    <CustomLink
+                                        className="display-6  item-hover text-decoration-none pb-2"
                                         to="/dashboard"
                                     >
-                                        <GoPrimitiveDot className="visually-hidden" />{" "}
+                                        <GoPrimitiveDot className="visually-none" />{" "}
                                         DASHBOARD
+                                    </CustomLink>
+
+                                    <CustomLink
+                                        className="display-6  item-hover text-decoration-none pb-2"
+                                        to="/blogs"
+                                    >
+                                        <GoPrimitiveDot className="visually-none" />{" "}
+                                        BLOGS
                                     </CustomLink>
 
                                     {user ? (
                                         <button
+                                            style={{
+                                                backgroundColor: "#58468c",
+                                            }}
                                             onClick={logout}
-                                            className="btn fs-2 mt-5  fw-semibold p-0 rounded-0 btn-outline-danger"
+                                            className="btn fs-3 text-light col-lg-3  mt-5 fw-semibold p-0 rounded-5"
                                         >
                                             LOG OUT
                                         </button>

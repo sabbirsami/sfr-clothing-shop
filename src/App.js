@@ -22,6 +22,7 @@ import ManageAllProduct from "./Components/Dashboard/ManageAllProduct";
 import AddProduct from "./Components/Dashboard/AddProduct";
 import MyOrders from "./Components/Dashboard/MyOrders";
 import ManageOrders from "./Components/Dashboard/ManageOrders";
+import Payment from "./Components/Dashboard/Payment";
 
 function App() {
     return (
@@ -35,6 +36,7 @@ function App() {
                     <Route path="shoes" element={<AllShoe />}></Route>
                 </Route>
                 <Route path="/blogs" element={<Blogs />}></Route>
+                <Route path="/payment/:id" element={<Payment />}></Route>
                 <Route path="/about" element={<About />}></Route>
                 <Route path="/contact" element={<Contact />}></Route>
                 <Route path="/dashboard" element={<Dashboard />}>

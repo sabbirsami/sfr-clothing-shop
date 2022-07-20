@@ -27,6 +27,7 @@ const ShippingBag = () => {
     if (isLoading || loading) {
         return <Loading />;
     }
+    console.log(allOrders);
 
     const handleCancel = (id) => {
         console.log(id);
@@ -170,12 +171,13 @@ const ShippingBag = () => {
                                     <p>TOTAL COST</p>
                                     <p>${allOrders.totalFinal + 3}</p>
                                 </div>
-                                <button
+                                <Link
+                                    to={`/payment/${allOrders.orders.email}`}
                                     className="btn w-100 rounded-0 text-white"
                                     style={{ backgroundColor: "#456edd" }}
                                 >
                                     CHECKOUT
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
