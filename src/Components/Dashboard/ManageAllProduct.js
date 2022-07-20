@@ -8,7 +8,7 @@ const ManageAllProduct = () => {
     const [page, setPage] = useState(0);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products?page=${page}&size=${10}`)
+        fetch(`https://sfr-clothing-store.herokuapp.com/products?page=${page}&size=${10}`)
             .then((res) => res.json())
             .then((data) => {
                 setProducts(data);
@@ -16,7 +16,7 @@ const ManageAllProduct = () => {
         // refetch();
     }, [page, products]);
     useEffect(() => {
-        fetch("http://localhost:5000/productCount")
+        fetch("https://sfr-clothing-store.herokuapp.com/productCount")
             .then((res) => res.json())
             .then((data) => {
                 const counts = data.count;
@@ -27,7 +27,7 @@ const ManageAllProduct = () => {
 
     const handleDelete = (id) => {
         console.log(id);
-        fetch(`http://localhost:5000/products/${id}`, {
+        fetch(`https://sfr-clothing-store.herokuapp.com/products/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())

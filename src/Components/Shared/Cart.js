@@ -17,7 +17,9 @@ const Cart = () => {
         isLoading,
         refetch,
     } = useQuery("product", () =>
-        fetch(`http://localhost:5000/products/${id}`).then((res) => res.json())
+        fetch(`https://sfr-clothing-store.herokuapp.com/products/${id}`).then(
+            (res) => res.json()
+        )
     );
     const [orderQuantity, setOrderQuantity] = useState(1);
     // const { productImage, setProductImage } = useState("");
@@ -54,7 +56,7 @@ const Cart = () => {
             image: image,
         };
         console.log(order);
-        fetch("http://localhost:5000/orders", {
+        fetch("https://sfr-clothing-store.herokuapp.com/orders", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

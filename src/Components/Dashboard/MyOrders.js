@@ -12,9 +12,12 @@ const MyOrders = () => {
         refetch,
         isLoading,
     } = useQuery("my-orders", () =>
-        fetch(`http://localhost:5000/orders?email=${user?.email}`, {
-            method: "GET",
-        }).then((res) => res.json())
+        fetch(
+            `https://sfr-clothing-store.herokuapp.com/orders?email=${user?.email}`,
+            {
+                method: "GET",
+            }
+        ).then((res) => res.json())
     );
     console.log(orders);
     if (isLoading) {
@@ -22,7 +25,7 @@ const MyOrders = () => {
     }
     const handleCancel = (id) => {
         console.log(id);
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://sfr-clothing-store.herokuapp.com/orders/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())

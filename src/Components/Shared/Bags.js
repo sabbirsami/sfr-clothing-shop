@@ -6,7 +6,7 @@ import Loading from "./Loading";
 
 const Bags = () => {
     const { data: products, isLoading } = useQuery("categoryBags", () =>
-        fetch(`http://localhost:5000/allproducts/Bag`, {
+        fetch(`https://sfr-clothing-store.herokuapp.com/allproducts/Bag`, {
             method: "GET",
         }).then((res) => res.json())
     );
