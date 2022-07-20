@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
     return (
-        <div>
-            <div className="container-fluid hero-bg">
+        <div className=" hero-bg">
+            <div className="container-fluid blur">
                 <div className="container py-5">
                     <div className="row py-lg-5">
                         <div className="col-lg-6 py-lg-5">

@@ -3,11 +3,17 @@ body {
     font-family: "Poppins", sans-serif;
 }
 .hero-bg {
-    background-image: url("./Images/banner/banner2.jpg");
+    background-image: url("./Images/banner/banner3.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+}
+@media screen and (max-width: 767px) {
+    .blur {
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(8px);
+    }
 }
 .blog-bg {
     background-image: url("./Images/products/banner/b19.jpg");
