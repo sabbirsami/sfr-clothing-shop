@@ -99,7 +99,7 @@ const Dashboard = () => {
                                         <AiOutlineShoppingCart className="me-2" />{" "}
                                         My Order
                                     </DashboardLink>
-                                    <DashboardLink to="/dashboard/manage-review">
+                                    {/* <DashboardLink to="/dashboard/manage-review">
                                         <MdReviews className="me-2" /> Manage
                                         Review
                                     </DashboardLink>
@@ -109,7 +109,7 @@ const Dashboard = () => {
                                     <DashboardLink to="/dashboard/add-review">
                                         <MdReviews className="me-2" /> Add
                                         Review
-                                    </DashboardLink>
+                                    </DashboardLink> */}
                                     <DashboardLink to="/dashboard/add-admin">
                                         <HiOutlineUserAdd className="me-2" />{" "}
                                         Add Admin

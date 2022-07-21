@@ -7,7 +7,7 @@ const ManageOrders = () => {
         data: orders,
         refetch,
         isLoading,
-    } = useQuery("orders", () =>
+    } = useQuery("manageOrder", () =>
         fetch(`https://sfr-clothing-store.herokuapp.com/orders`).then((res) =>
             res.json()
         )

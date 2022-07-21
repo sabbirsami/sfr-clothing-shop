@@ -23,6 +23,7 @@ import AddProduct from "./Components/Dashboard/AddProduct";
 import MyOrders from "./Components/Dashboard/MyOrders";
 import ManageOrders from "./Components/Dashboard/ManageOrders";
 import Payment from "./Components/Dashboard/Payment";
+import AddAdmin from "./Components/Dashboard/AddAdmin";
 
 function App() {
     return (
@@ -45,6 +46,7 @@ function App() {
                         element={<ManageAllProduct />}
                     ></Route>
                     <Route path="add-product" element={<AddProduct />}></Route>
+                    <Route path="add-admin" element={<AddAdmin />}></Route>
                     <Route path="my-order" element={<MyOrders />}></Route>
                     <Route
                         path="manage-order"
