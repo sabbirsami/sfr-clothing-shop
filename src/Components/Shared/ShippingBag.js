@@ -1,16 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
 import { RiDeleteBin2Fill } from "react-icons/ri";
 import Loading from "./Loading";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 import toast from "react-hot-toast";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import Header from "./Header";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import CheckoutForm from "./CheckoutForm";
+const stripePromise = loadStripe(
+    "pk_test_51L2vNMJH0mXagrhOdzLEhBYwbNjUZQy6o9TQRQP00TOEqz5YJutO7I2OjEflJDptHPmz9U3iLzgX9sBRtIlYTIB900kUiVeM24"
+);
 
 const ShippingBag = () => {
     const [user, loading] = useAuthState(auth);
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     const {
         data: allOrders,
         isLoading,
@@ -45,6 +56,24 @@ const ShippingBag = () => {
             <Header />
             <div>
                 <div className="container">
+                    <Modal show={show} onHide={handleClose}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Payment</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <Elements stripe={stripePromise}>
+                                <CheckoutForm />
+                            </Elements>
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button variant="secondary" onClick={handleClose}>
+                                Cancel
+                            </Button>
+                            <Button variant="primary" onClick={handleClose}>
+                                Pay
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
                     <div className="row justify-content-evenly">
                         <div className="col-lg-9">
                             <div className="py-5 px-3">
@@ -171,13 +200,13 @@ const ShippingBag = () => {
                                     <p>TOTAL COST</p>
                                     <p>${allOrders.totalFinal + 3}</p>
                                 </div>
-                                <Link
-                                    to={`/payment/${allOrders.orders.email}`}
+                                <button
+                                    onClick={handleShow}
                                     className="btn w-100 rounded-0 text-white"
                                     style={{ backgroundColor: "#456edd" }}
                                 >
                                     CHECKOUT
-                                </Link>
+                                </button>
                             </div>
                         </div>
                     </div>
