@@ -62,7 +62,9 @@ const ShippingBag = () => {
                         </Modal.Header>
                         <Modal.Body>
                             <Elements stripe={stripePromise}>
-                                <CheckoutForm />
+                                <CheckoutForm
+                                    totalCost={allOrders.totalFinal}
+                                />
                             </Elements>
                         </Modal.Body>
                         <Modal.Footer>
