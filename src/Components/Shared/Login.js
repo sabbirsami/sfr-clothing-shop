@@ -12,6 +12,7 @@ import {
     useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import Header from "./Header";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -57,6 +58,7 @@ const Login = () => {
     };
     return (
         <div>
+            <Header />
             <div className="container py-3">
                 <div className=" text-center">
                     <h1 className="fw-semibold display-3 pb-2">Log In</h1>

@@ -12,10 +12,10 @@ const CheckoutForm = ({ totalCost }) => {
     const [processing, setProcessing] = useState(false);
     const [transactionId, setTransactionId] = useState("");
     const [clientSecret, setClientSecret] = useState("");
-    console.log(totalCost);
+    console.log(clientSecret);
 
     useEffect(() => {
-        fetch("http://localhost:5000//create-payment-intent", {
+        fetch("http://localhost:5000/create-payment-intent", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
