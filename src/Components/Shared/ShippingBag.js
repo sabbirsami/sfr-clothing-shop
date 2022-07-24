@@ -67,14 +67,6 @@ const ShippingBag = () => {
                                 />
                             </Elements>
                         </Modal.Body>
-                        <Modal.Footer>
-                            <Button variant="secondary" onClick={handleClose}>
-                                Cancel
-                            </Button>
-                            <Button variant="primary" onClick={handleClose}>
-                                Pay
-                            </Button>
-                        </Modal.Footer>
                     </Modal>
                     <div className="row justify-content-evenly">
                         <div className="col-lg-9">
