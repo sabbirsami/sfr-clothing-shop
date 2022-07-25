@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, InputGroup, Form } from "react-bootstrap";
 import logo from "../../Images/logo.png";
 import { BsCart3 } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
@@ -48,21 +48,39 @@ const Header = () => {
         <header className="sticky-top">
             <Navbar collapseOnSelect expand="lg" bg="light" variant="white">
                 <Container>
-                    <Navbar.Brand className="w-50 m-0" href="">
-                        <div className="col-lg-4">
+                    <Navbar.Brand className=" m-0" href="">
+                        <div className="">
                             <Link to="/">
                                 <img
-                                    className="img-fluid w-75 pb-3"
+                                    className="img-fluid w-100 pb-3"
                                     src={logo}
                                     alt=""
                                 />
                             </Link>
                         </div>
                     </Navbar.Brand>
-                    <div className="d-flex">
+                    <InputGroup
+                        className="mx-5 d-none d-lg-flex rounded-0"
+                        size="lg"
+                    >
+                        <Form.Control
+                            className=" rounded-0 py-2"
+                            placeholder="Search your product..."
+                            aria-label="Recipient's username"
+                            aria-describedby="basic-addon2"
+                        />
+                        <Button
+                            variant="outline-secondary"
+                            className=" rounded-0"
+                            id="button-addon2"
+                        >
+                            Search
+                        </Button>
+                    </InputGroup>
+                    <div className="d-flex border border-1">
                         <CustomLink
                             to="/shipping-bag"
-                            className="position-relative d-flex align-items-center rounded-pill  ms-2"
+                            className="position-relative d-flex align-items-center  ms-2"
                         >
                             <BsCart3 className=" ms-2 fw-semibold fs-3" />
                             <span class="position-absolute top-0 start-100  badge rounded-pill bg-danger">
@@ -72,17 +90,19 @@ const Header = () => {
                                 </span>
                             </span>
                         </CustomLink>
+
                         {values.map((v, idx) => (
                             <Button
                                 key={idx}
-                                className="ms-4 border-0 btn-outline-none mb-1 btn-light fs-3"
+                                className="ms-4 border-0 py-1 ps-2 pe-3 btn-outline-none btn-light fs-3"
                                 onClick={() => handleShow(v)}
                             >
-                                <AiOutlineMenu />
+                                <AiOutlineMenu className="mb-1" />
                                 {typeof v === "string" &&
                                     `below ${v.split("-")[0]}`}
                             </Button>
                         ))}
+
                         <Modal
                             show={show}
                             fullscreen={fullscreen}
