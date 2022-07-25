@@ -22,7 +22,7 @@ const Shoes = () => {
                     <h1 className="display-6">Shoes</h1>
                     <Link
                         to={"/shop/shoes"}
-                        className="text-warning text-decoration-none"
+                        className="btn-common fw-semibold text-decoration-none"
                     >
                         See All
                     </Link>

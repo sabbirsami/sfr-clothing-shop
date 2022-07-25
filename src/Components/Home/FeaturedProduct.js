@@ -31,10 +31,10 @@ const FeaturedProduct = () => {
                             <Product key={index} product={product} />
                         ))}
                     </div>
-                    <p className="text-center fs-5 fw-light">
+                    <p className="text-center fs-6 fw-light">
                         <Link
                             to={"/shop"}
-                            className="text-warning text-decoration-none"
+                            className="btn-common fw-semibold text-decoration-none"
                         >
                             See All <IoArrowForwardCircle />
                         </Link>

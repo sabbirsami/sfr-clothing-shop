@@ -78,6 +78,9 @@ body {
 .bg-common {
     background-color: #635bff !important;
 }
+.btn-common {
+    color: #635bff !important;
+}
 .fs-stock {
     color: transparent;
     -webkit-text-fill-color: transparent;
