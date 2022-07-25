@@ -3,6 +3,7 @@ import Bags from "../Shared/Bags";
 import Cloth from "../Shared/Cloth";
 import Header from "../Shared/Header";
 import Shoes from "../Shared/Shoes";
+import SubHeader from "../Shared/SubHeader";
 import Benefit from "./Benefit";
 import Categories from "./Categories";
 import FeaturedProduct from "./FeaturedProduct";
@@ -13,6 +14,7 @@ import Offer from "./Offer";
 const Home = () => {
     return (
         <>
+            <SubHeader />
             <Header />
             <Hero />
             <Categories />

@@ -10,7 +10,8 @@ const Hero = () => {
                     <div className="row py-lg-5">
                         <div className="col-lg-6 py-lg-5">
                             <h1 className="display-1 pt-4  fw-bold">
-                                New, <span className="fs-stock">Amazing</span>{" "}
+                                New,{" "}
+                                <span className="linear-wipe">Amazing</span>{" "}
                                 Stuff is Here...
                             </h1>
                             <p className="text-muted pb-3 fs-5 pb-lg-4">
