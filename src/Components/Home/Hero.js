@@ -19,11 +19,11 @@ const Hero = () => {
                                 <span className="text-dark">20% discount</span>
                             </p>
 
-                            <button className="btn mb-lg-5 mb-5 border-3 btn-primary text-white border-success px-4 py-2 rounded-0">
+                            <button className="btn mb-lg-5 mb-5 border-3 fw-semibold btn-primary text-white border-success px-4 py-2 rounded-0">
                                 Shop Now{" "}
                                 <BsCart3 className="mb-1 ms-2 fw-semibold fs-5" />
                             </button>
-                            <button className="btn mb-lg-5 mb-5 border-3 btn-outline-primary  px-4 py-2 ms-3 rounded-0">
+                            <button className="btn mb-lg-5 mb-5 border-3 fw-semibold btn-outline-primary  px-4 py-2 ms-3 rounded-0">
                                 <Link
                                     to="/contact"
                                     className="text-decoration-none"

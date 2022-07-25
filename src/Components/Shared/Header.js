@@ -52,7 +52,7 @@ const Header = () => {
                         <div className="">
                             <Link to="/">
                                 <img
-                                    className="img-fluid w-100 pb-3"
+                                    className="img-fluid w-100 pb-1"
                                     src={logo}
                                     alt=""
                                 />
@@ -70,38 +70,42 @@ const Header = () => {
                             aria-describedby="basic-addon2"
                         />
                         <Button
-                            variant="outline-secondary"
+                            variant="outline-secondary text-light bg-common"
                             className=" rounded-0"
                             id="button-addon2"
                         >
                             Search
                         </Button>
                     </InputGroup>
-                    <div className="d-flex border border-1">
-                        <CustomLink
-                            to="/shipping-bag"
-                            className="position-relative d-flex align-items-center  ms-2"
-                        >
-                            <BsCart3 className=" ms-2 fw-semibold fs-3" />
-                            <span class="position-absolute top-0 start-100  badge rounded-pill bg-danger">
-                                {allOrders.count}
-                                <span class="visually-none">
-                                    unread messages
-                                </span>
-                            </span>
-                        </CustomLink>
-
-                        {values.map((v, idx) => (
-                            <Button
-                                key={idx}
-                                className="ms-4 border-0 py-1 ps-2 pe-3 btn-outline-none btn-light fs-3"
-                                onClick={() => handleShow(v)}
+                    <div className="d-flex align-item-center">
+                        <div className="me-4 d-flex align-item-center">
+                            <CustomLink
+                                to="/shipping-bag"
+                                className="position-relative d-flex align-items-center  ms-2"
                             >
-                                <AiOutlineMenu className="mb-1" />
-                                {typeof v === "string" &&
-                                    `below ${v.split("-")[0]}`}
-                            </Button>
-                        ))}
+                                <BsCart3 className=" ms-2 fw-semibold fs-3" />
+                                <span class="position-absolute top-0 start-100  badge rounded-pill bg-danger">
+                                    {allOrders.count}
+                                    <span class="visually-none">
+                                        unread messages
+                                    </span>
+                                </span>
+                            </CustomLink>
+                        </div>
+
+                        <div className="border ms-2">
+                            {values.map((v, idx) => (
+                                <Button
+                                    key={idx}
+                                    className=" border-0 btn-outline-none btn-light fs-3"
+                                    onClick={() => handleShow(v)}
+                                >
+                                    <AiOutlineMenu className="mb-1" />
+                                    {typeof v === "string" &&
+                                        `below ${v.split("-")[0]}`}
+                                </Button>
+                            ))}
+                        </div>
 
                         <Modal
                             show={show}
