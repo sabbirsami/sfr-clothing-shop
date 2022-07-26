@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
     return (
-        <div className=" border-top">
+        <div className=" border-top bg-dark text-light py-lg-5">
             <div className="container py-5">
                 <div className="row pb-3 justify-content-between">
                     <div className="col-lg-2 d-flex align-items-center justify-content-between">
