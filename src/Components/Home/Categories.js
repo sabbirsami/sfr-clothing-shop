@@ -12,7 +12,7 @@ const Categories = () => {
                 <h1 className="display-6 pb-3">Categories</h1>
                 <div className="row">
                     <div
-                        className="col-lg-3  mt-2 border-end bg-gradient border-light border-3 "
+                        className="col-lg-3 col-6 mt-2 border-end bg-gradient border-light border-3 "
                         style={{ backgroundColor: "#EFEFEF" }}
                     >
                         <Link
@@ -32,7 +32,7 @@ const Categories = () => {
                         </Link>
                     </div>
                     <div
-                        className="col-lg-3  mt-2 border-end bg-gradient border-light border-3 "
+                        className="col-lg-3 col-6 mt-2 border-end bg-gradient border-light border-3 "
                         style={{ backgroundColor: "#EFEFEF" }}
                     >
                         <Link
@@ -50,7 +50,7 @@ const Categories = () => {
                         </Link>
                     </div>
                     <div
-                        className="col-lg-3  mt-2 border-end bg-gradient border-light border-3 "
+                        className="col-lg-3 col-6 mt-2 border-end bg-gradient border-light border-3 "
                         style={{ backgroundColor: "#EFEFEF" }}
                     >
                         <Link
@@ -72,7 +72,7 @@ const Categories = () => {
                         </Link>
                     </div>
                     <div
-                        className="col-lg-3  mt-2 border-end bg-gradient border-light border-3 "
+                        className="col-lg-3 col-6 mt-2 border-end bg-gradient border-light border-3 "
                         style={{ backgroundColor: "#EFEFEF" }}
                     >
                         <Link

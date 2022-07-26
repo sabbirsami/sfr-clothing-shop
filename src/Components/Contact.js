@@ -83,7 +83,10 @@ const Contact = () => {
                                                 />
                                             </Form.Group>
 
-                                            <button className="btn bg-common text-light py-3 px-5">
+                                            <button
+                                                type="submit"
+                                                className="btn bg-common text-light py-3 px-5"
+                                            >
                                                 Sent Message
                                             </button>
                                         </Form>
