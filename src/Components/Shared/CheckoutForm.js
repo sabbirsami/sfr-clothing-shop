@@ -51,8 +51,11 @@ const CheckoutForm = ({ totalCost }) => {
             setSuccess("");
         } else {
             setCardError("");
-
             console.log("[PaymentMethod]", paymentMethod);
+            // const payment = {
+            //     order: _id,
+            //     transactionId: paymentIntent.id,
+            // };
         }
         const { paymentIntent, error: intentError } =
             await stripe.confirmCardPayment(clientSecret, {

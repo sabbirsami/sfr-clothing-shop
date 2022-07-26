@@ -48,9 +48,9 @@ const Header = () => {
         <header className="sticky-top">
             <Navbar collapseOnSelect expand="lg" bg="light" variant="white">
                 <Container>
-                    <Navbar.Brand className=" m-0" href="">
-                        <div className="">
-                            <Link to="/">
+                    <Navbar.Brand className=" m-0 w-15" href="">
+                        <div className=" w-15 m-0">
+                            <Link to="/" className="m-0">
                                 <img
                                     className="img-fluid w-100 pb-1"
                                     src={logo}

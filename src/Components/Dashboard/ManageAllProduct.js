@@ -1,14 +1,24 @@
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import Pagination from "react-bootstrap/Pagination";
+import { Button, Form, Modal } from "react-bootstrap";
 
 const ManageAllProduct = () => {
     const [products, setProducts] = useState([]);
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
 
+    // UPDATE MODAL
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => {
+        setShow(true);
+    };
+
     useEffect(() => {
-        fetch(`https://sfr-clothing-store.herokuapp.com/products?page=${page}&size=${10}`)
+        fetch(
+            `https://sfr-clothing-store.herokuapp.com/products?page=${page}&size=${10}`
+        )
             .then((res) => res.json())
             .then((data) => {
                 setProducts(data);
@@ -24,6 +34,15 @@ const ManageAllProduct = () => {
                 setPageCount(pages);
             });
     }, []);
+    const handleShowUpdateModal = (id) => {
+        console.log(id);
+        handleUpdate(id);
+        handleShow(true);
+    };
+    const handleUpdate = (id) => {
+        console.log(id);
+        // handleClose();
+    };
 
     const handleDelete = (id) => {
         console.log(id);
@@ -40,6 +59,68 @@ const ManageAllProduct = () => {
     return (
         <div>
             <div className=" bg-white rounded-3 mt-3 p-2">
+                <Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Modal heading</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <Form>
+                            <Form.Group
+                                className="mb-3"
+                                controlId="exampleForm.ControlInput1"
+                            >
+                                <Form.Label>Name</Form.Label>
+                                <Form.Control
+                                    required
+                                    className="py-3 rounded-0"
+                                    type="text"
+                                    placeholder="Product Name"
+                                />
+                            </Form.Group>
+                            <div className="row">
+                                <div className="col-lg-6">
+                                    <Form.Group
+                                        className="mb-3"
+                                        controlId="exampleForm.ControlInput1"
+                                    >
+                                        <Form.Label>Price</Form.Label>
+                                        <Form.Control
+                                            required
+                                            className="py-3 rounded-0"
+                                            type="number"
+                                            placeholder="Price"
+                                        />
+                                    </Form.Group>
+                                </div>
+                                <div className="col-lg-6">
+                                    <Form.Group
+                                        className="mb-3"
+                                        controlId="exampleForm.ControlInput1"
+                                    >
+                                        <Form.Label>Quantity</Form.Label>
+                                        <Form.Control
+                                            required
+                                            className="py-3 rounded-0"
+                                            type="number"
+                                            placeholder="Quantity"
+                                        />
+                                    </Form.Group>
+                                </div>
+                            </div>
+                        </Form>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose}>
+                            Close
+                        </Button>
+                        <Button
+                            variant="primary"
+                            onClick={() => handleUpdate()}
+                        >
+                            Save Changes
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
                 <div
                     className="m-2 p-3 rounded-2"
                     style={{ backgroundColor: "#F5F6FA" }}
@@ -60,7 +141,12 @@ const ManageAllProduct = () => {
                             <div className="col-2">{product.stock}</div>
 
                             <div className="col-2">
-                                <button className="btn px-0 text-success">
+                                <button
+                                    onClick={() =>
+                                        handleShowUpdateModal(product._id)
+                                    }
+                                    className="btn px-0 text-success"
+                                >
                                     Update
                                 </button>
                             </div>
