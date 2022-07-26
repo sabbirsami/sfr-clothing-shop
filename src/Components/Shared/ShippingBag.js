@@ -69,11 +69,10 @@ const ShippingBag = () => {
                         </Modal.Body>
                     </Modal>
                     <div className="row justify-content-evenly">
-                        <div className="col-lg-9">
+                        <div className="col-lg-8">
                             <div className="py-5 px-3">
-                                <div className="d-flex align-items-center border-bottom justify-content-between pb-4">
-                                    <h2>Shopping Cart</h2>
-                                    <h2>{allOrders.count} Items</h2>
+                                <div className="d-flex align-items-center justify-content-between pb-4">
+                                    <h1 className="display-5">Shopping Cart</h1>
                                 </div>
                                 <div className="">
                                     <div
@@ -93,15 +92,15 @@ const ShippingBag = () => {
                                             TOTAL
                                         </div>
                                         <div className="col-2 fw-semibold">
-                                            <RiDeleteBin2Fill />
+                                            Remove
                                         </div>
                                     </div>
                                     {allOrders.orders.map((order) => (
                                         <div className="">
-                                            <div className="row bg-light py-2 mb-1 rounded-3 align-items-center justify-content-between">
+                                            <div className="row bg-light py-2 mb-2 rounded-3 align-items-center justify-content-between">
                                                 <div className="col-4">
                                                     <div className="d-flex align-items-center">
-                                                        <div className="product-image col-lg-2 bg-light rounded">
+                                                        <div className="product-image col-lg-4 bg-light rounded">
                                                             <img
                                                                 className="img-fluid rounded"
                                                                 src={
@@ -111,9 +110,9 @@ const ShippingBag = () => {
                                                             />
                                                         </div>
                                                         <div className="product-name ms-4">
-                                                            <h4 className="fw-light">
+                                                            <h5 className="">
                                                                 {order.name}
-                                                            </h4>
+                                                            </h5>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -137,7 +136,7 @@ const ShippingBag = () => {
                                                         }
                                                         className="btn ps-0 border-0 text-danger"
                                                     >
-                                                        <RiDeleteBin2Fill />
+                                                        Remove
                                                     </button>
                                                 </div>
                                             </div>
@@ -157,12 +156,12 @@ const ShippingBag = () => {
                             </div>
                         </div>
                         <div
-                            className="col-lg-3"
+                            className="col-lg-4"
                             style={{ backgroundColor: "#F5F5F6" }}
                         >
                             <div className="py-5 px-2">
-                                <div className="pb-4 border-bottom">
-                                    <h2>Order Summary</h2>
+                                <div className="pb-4">
+                                    <h1 className="display-5">Order Summary</h1>
                                 </div>
                                 <div className="d-flex align-items-center mb-3 fw-semibold justify-content-between pt-4">
                                     <p>{allOrders.count} ITEMS</p>
@@ -181,12 +180,14 @@ const ShippingBag = () => {
                                         PROMO CODE
                                     </p>
                                     <div className="bg-white">
-                                        <p className="px-3 py-3 mb-0">
-                                            Enter your code
-                                        </p>
+                                        <input
+                                            type="text"
+                                            className="px-3 w-100 py-3 mb-0"
+                                            placeholder="Enter your code"
+                                        />
                                     </div>
                                 </div>
-                                <button className="btn btn-primary rounded-0 px-4">
+                                <button className="btn btn-primary bg-common rounded-0 px-4">
                                     APPLY
                                 </button>
                                 <hr className="mt-5 mb-4" />
@@ -196,8 +197,7 @@ const ShippingBag = () => {
                                 </div>
                                 <button
                                     onClick={handleShow}
-                                    className="btn w-100 rounded-0 text-white"
-                                    style={{ backgroundColor: "#456edd" }}
+                                    className="btn w-100 rounded-0 py-3 bg-common text-white"
                                 >
                                     CHECKOUT
                                 </button>

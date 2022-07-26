@@ -1,6 +1,6 @@
 body {
     font-family: "Libre Baskerville", serif;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif !important;
 }
 .hero-bg {
     background-image: url("./Images/banner/banner3.jpg");
