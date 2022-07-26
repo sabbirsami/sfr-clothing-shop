@@ -11,6 +11,7 @@ import Header from "./Header";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "./CheckoutForm";
+import { FloatingLabel, Form } from "react-bootstrap";
 const stripePromise = loadStripe(
     "pk_test_51L2vNMJH0mXagrhOdzLEhBYwbNjUZQy6o9TQRQP00TOEqz5YJutO7I2OjEflJDptHPmz9U3iLzgX9sBRtIlYTIB900kUiVeM24"
 );
@@ -54,16 +55,140 @@ const ShippingBag = () => {
             <Header />
             <div>
                 <div className="container">
-                    <Modal show={show} onHide={handleClose}>
+                    <Modal
+                        className="rounded-0"
+                        size="xl"
+                        aria-labelledby="example-modal-sizes-title-lg"
+                        show={show}
+                        onHide={handleClose}
+                    >
                         <Modal.Header closeButton>
-                            <Modal.Title>Payment</Modal.Title>
+                            <Modal.Title
+                                id="example-modal-sizes-title-lg"
+                                className="display-6"
+                            >
+                                Payment Information
+                            </Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                            <Elements stripe={stripePromise}>
-                                <CheckoutForm
-                                    totalCost={allOrders.totalFinal}
-                                />
-                            </Elements>
+                            <h1 className="px-2">Address</h1>
+                            <div className="pb-2 px-2">
+                                <Form>
+                                    <Form.Group
+                                        className="mb-3"
+                                        controlId="exampleForm.ControlInput1"
+                                    >
+                                        <Form.Label>Country</Form.Label>
+                                        <Form.Control
+                                            required
+                                            className="py-3 rounded-0"
+                                            type="text"
+                                            defaultValue={"Bangladesh"}
+                                        />
+                                    </Form.Group>
+                                    <Form.Group
+                                        className="mb-3"
+                                        controlId="exampleForm.ControlInput1"
+                                    >
+                                        <Form.Label>Address</Form.Label>
+                                        <Form.Control
+                                            required
+                                            className="py-3 rounded-0"
+                                            type="text"
+                                            placeholder="Address"
+                                        />
+                                    </Form.Group>
+                                    <div className="row">
+                                        <div className="col-lg-8">
+                                            <Form.Group
+                                                className="mb-3"
+                                                controlId="exampleForm.ControlInput1"
+                                            >
+                                                <Form.Label>City</Form.Label>
+                                                <Form.Control
+                                                    required
+                                                    className="py-3 rounded-0"
+                                                    type="text"
+                                                    placeholder="City"
+                                                />
+                                            </Form.Group>
+                                        </div>
+                                        <div className="col-lg-4">
+                                            <Form.Group
+                                                className="mb-3"
+                                                controlId="exampleForm.ControlInput1"
+                                            >
+                                                <Form.Label>
+                                                    Zip Code
+                                                </Form.Label>
+                                                <Form.Control
+                                                    required
+                                                    className="py-3 rounded-0"
+                                                    type="number"
+                                                    placeholder="Zip Code"
+                                                />
+                                            </Form.Group>
+                                        </div>
+                                    </div>
+                                    <Form.Group
+                                        className="mb-3"
+                                        controlId="exampleForm.ControlInput1"
+                                    >
+                                        <Form.Label>
+                                            State / Province
+                                        </Form.Label>
+                                        <Form.Control
+                                            required
+                                            className="py-3 rounded-0"
+                                            type="text"
+                                            placeholder="State / Province"
+                                        />
+                                    </Form.Group>
+                                    <div className="row">
+                                        <div className="col-lg-4">
+                                            <Form.Group
+                                                className="mb-3"
+                                                controlId="exampleForm.ControlInput1"
+                                            >
+                                                <Form.Label>
+                                                    Country Code
+                                                </Form.Label>
+                                                <Form.Control
+                                                    required
+                                                    className="py-3 rounded-0"
+                                                    type="number"
+                                                    placeholder="Country Code"
+                                                />
+                                            </Form.Group>
+                                        </div>
+                                        <div className="col-lg-8">
+                                            <Form.Group
+                                                className="mb-3"
+                                                controlId="exampleForm.ControlInput1"
+                                            >
+                                                <Form.Label>
+                                                    Phone Number
+                                                </Form.Label>
+                                                <Form.Control
+                                                    required
+                                                    className="py-3 rounded-0"
+                                                    type="number"
+                                                    placeholder="Phone Number"
+                                                />
+                                            </Form.Group>
+                                        </div>
+                                    </div>
+                                </Form>
+                            </div>
+
+                            <h1 className="px-2 pb-3">Billing</h1>
+                            <div className="px-2">
+                                <Elements stripe={stripePromise}>
+                                    <CheckoutForm
+                                        totalCost={allOrders.totalFinal}
+                                    />
+                                </Elements>
+                            </div>
                         </Modal.Body>
                     </Modal>
                     <div className="row justify-content-evenly">
@@ -165,7 +290,7 @@ const ShippingBag = () => {
                                     <p>{allOrders.count} ITEMS</p>
                                     <p>${allOrders.totalFinal}</p>
                                 </div>
-                                <div className="mb-3">
+                                <div className="mb-4">
                                     <p className="fw-semibold mb-1">SHIPPING</p>
                                     <div className="bg-white">
                                         <p className="px-3 py-3 mb-0">
@@ -186,7 +311,7 @@ const ShippingBag = () => {
                                     </div>
                                 </div>
                                 <button className="btn btn-primary bg-common rounded-0 px-4">
-                                    APPLY
+                                    Apply
                                 </button>
                                 <hr className="mt-5 mb-4" />
                                 <div className="d-flex align-items-center mb-3 fw-semibold justify-content-between">
@@ -197,7 +322,7 @@ const ShippingBag = () => {
                                     onClick={handleShow}
                                     className="btn w-100 rounded-0 py-3 bg-common text-white"
                                 >
-                                    CHECKOUT
+                                    Proceed to Checkout
                                 </button>
                             </div>
                         </div>

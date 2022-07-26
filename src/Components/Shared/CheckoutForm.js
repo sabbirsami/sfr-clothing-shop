@@ -79,6 +79,7 @@ const CheckoutForm = ({ totalCost }) => {
             <>
                 <form onSubmit={handleSubmit}>
                     <CardElement
+                        className="border border-1 p-3 "
                         options={{
                             style: {
                                 base: {
@@ -95,7 +96,7 @@ const CheckoutForm = ({ totalCost }) => {
                         }}
                     />
                     <button
-                        className="btn btn-success alert-success mt-3"
+                        className="btn btn-success px-4 alert-success my-3"
                         type="submit"
                         disabled={!stripe || !clientSecret}
                     >

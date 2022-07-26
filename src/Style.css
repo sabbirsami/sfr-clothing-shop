@@ -120,3 +120,7 @@ body {
 .heading-font {
     font-family: "Libre Baskerville", serif;
 }
+
+.CardField-number {
+    border: 1px solid #000000 !important;
+}
