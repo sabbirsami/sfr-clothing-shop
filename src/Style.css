@@ -32,6 +32,13 @@ body {
     background-size: cover;
     height: 100%;
 }
+.contact-pattern {
+    background-image: url("./Images/pattern.svg");
+    background-position: bottom end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
 .visually-none {
     display: none;
 }
