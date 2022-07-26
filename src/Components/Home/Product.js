@@ -10,7 +10,7 @@ const Products = ({ product }) => {
         console.log(id);
     };
     return (
-        <div className="col-lg-3 py-3">
+        <div className="col-lg-3 col-6 py-3">
             <div className="p-1 rounded-2 border">
                 <div className="p-2">
                     <img className="img-fluid rounded-2" src={image} alt="" />
