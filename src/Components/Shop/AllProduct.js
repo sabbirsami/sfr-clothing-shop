@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useQuery } from "react-query";
+import Pagination from "react-bootstrap/Pagination";
 import Product from "../Home/Product";
 import Loading from "../Shared/Loading";
 
 const AllProduct = () => {
-    const { data: products, isLoading } = useQuery("products", () =>
-        fetch("https://sfr-clothing-store.herokuapp.com/products").then((res) =>
-            res.json()
-        )
+    const [pageCount, setPageCount] = useState(0);
+    const [page, setPage] = useState(0);
+
+    const { data: products, isLoading } = useQuery(["products", page], () =>
+        fetch(
+            `https://sfr-clothing-store.herokuapp.com/products?page=${page}&size=${12}`
+        ).then((res) => res.json())
     );
+    useEffect(() => {
+        fetch("https://sfr-clothing-store.herokuapp.com/productCount")
+            .then((res) => res.json())
+            .then((data) => {
+                const counts = data.count;
+                const pages = Math.ceil(counts / 12);
+                setPageCount(pages);
+            });
+    }, []);
     if (isLoading) {
         return <Loading />;
     }
@@ -21,6 +34,21 @@ const AllProduct = () => {
                             <Product key={index} product={product} />
                         ))}
                     </div>
+                </div>
+                <div className="my-5">
+                    <Pagination className="justify-content-center">
+                        <Pagination.Prev />
+                        {[...Array(pageCount).keys()].map((number, index) => (
+                            <Pagination.Item
+                                key={index}
+                                active={page === number}
+                                onClick={() => setPage(number)}
+                            >
+                                {number}
+                            </Pagination.Item>
+                        ))}
+                        <Pagination.Next />
+                    </Pagination>
                 </div>
             </div>
         </div>

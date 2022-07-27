@@ -4,11 +4,11 @@ import { BsCart3 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const Products = ({ product }) => {
-    const { _id, name, image, brand, quantity, price, details } = product;
+    const { _id, name, image, brand, price } = product;
 
-    const handleAddToCart = (id) => {
-        console.log(id);
-    };
+    // const handleAddToCart = (id) => {
+    //     console.log(id);
+    // };
     return (
         <div className="col-lg-3 col-6 py-3">
             <div className="p-1 rounded-2 border">
