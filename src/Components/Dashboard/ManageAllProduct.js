@@ -2,11 +2,16 @@ import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import Pagination from "react-bootstrap/Pagination";
 import { Button, Form, Modal } from "react-bootstrap";
+import { useForm } from "react-hook-form";
+import { useQuery } from "react-query";
 
 const ManageAllProduct = () => {
+    const { register, reset, handleSubmit } = useForm();
     const [products, setProducts] = useState([]);
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
+    const [updateId, setUpdateId] = useState("");
+    // console.log(updateId);
 
     // UPDATE MODAL
     const [show, setShow] = useState(false);
@@ -14,6 +19,15 @@ const ManageAllProduct = () => {
     const handleShow = () => {
         setShow(true);
     };
+    // const {
+    //     data: product,
+    //     isLoading,
+    //     refetch,
+    // } = useQuery("singleProductUpdate", () =>
+    //     fetch(
+    //         `https://sfr-clothing-store.herokuapp.com/products/${updateId}`
+    //     ).then((res) => res.json())
+    // );
 
     useEffect(() => {
         fetch(
@@ -25,6 +39,7 @@ const ManageAllProduct = () => {
             });
         // refetch();
     }, [page, products]);
+
     useEffect(() => {
         fetch("https://sfr-clothing-store.herokuapp.com/productCount")
             .then((res) => res.json())
@@ -34,14 +49,38 @@ const ManageAllProduct = () => {
                 setPageCount(pages);
             });
     }, []);
+    // if (isLoading) {
+    //     return <p>Loading..</p>;
+    // }
+
     const handleShowUpdateModal = (id) => {
-        console.log(id);
-        handleUpdate(id);
+        setUpdateId(id);
         handleShow(true);
     };
-    const handleUpdate = (id) => {
-        console.log(id);
-        // handleClose();
+    // const handleUpdate = (id) => {
+    //     console.log(id);
+    //     // handleClose();
+    // };
+    const handleUpdate = (data) => {
+        console.log(data);
+        console.log(updateId);
+        fetch(`https://sfr-clothing-store.herokuapp.com/products/${updateId}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                toast.success("Successfully update");
+                console.log("Success:", data);
+                reset();
+                handleClose();
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+            });
     };
 
     const handleDelete = (id) => {
@@ -59,21 +98,24 @@ const ManageAllProduct = () => {
     return (
         <div>
             <div className=" bg-white rounded-3 mt-3 p-2">
-                <Modal show={show} onHide={handleClose}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>Modal heading</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <Form>
+                <Modal show={show} className="rounded-0" onHide={handleClose}>
+                    <Form onSubmit={handleSubmit(handleUpdate)}>
+                        <Modal.Header
+                            className="border-0"
+                            closeButton
+                        ></Modal.Header>
+                        <Modal.Body>
                             <Form.Group
                                 className="mb-3"
                                 controlId="exampleForm.ControlInput1"
                             >
                                 <Form.Label>Name</Form.Label>
                                 <Form.Control
+                                    {...register("name", { required: true })}
                                     required
                                     className="py-3 rounded-0"
                                     type="text"
+                                    // defaultValue={product?.name}
                                     placeholder="Product Name"
                                 />
                             </Form.Group>
@@ -85,9 +127,13 @@ const ManageAllProduct = () => {
                                     >
                                         <Form.Label>Price</Form.Label>
                                         <Form.Control
+                                            {...register("price", {
+                                                required: true,
+                                            })}
                                             required
                                             className="py-3 rounded-0"
                                             type="number"
+                                            // defaultValue={product?.price}
                                             placeholder="Price"
                                         />
                                     </Form.Group>
@@ -97,9 +143,13 @@ const ManageAllProduct = () => {
                                         className="mb-3"
                                         controlId="exampleForm.ControlInput1"
                                     >
-                                        <Form.Label>Quantity</Form.Label>
+                                        <Form.Label>Stock</Form.Label>
                                         <Form.Control
+                                            {...register("stock", {
+                                                required: true,
+                                            })}
                                             required
+                                            // defaultValue={product?.stock}
                                             className="py-3 rounded-0"
                                             type="number"
                                             placeholder="Quantity"
@@ -107,19 +157,20 @@ const ManageAllProduct = () => {
                                     </Form.Group>
                                 </div>
                             </div>
-                        </Form>
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
-                            Close
-                        </Button>
-                        <Button
-                            variant="primary"
-                            onClick={() => handleUpdate()}
-                        >
-                            Save Changes
-                        </Button>
-                    </Modal.Footer>
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button variant="secondary" onClick={handleClose}>
+                                Close
+                            </Button>
+                            <Button
+                                variant="primary"
+                                type="submit"
+                                // onClick={() => handleUpdate()}
+                            >
+                                Save Changes
+                            </Button>
+                        </Modal.Footer>
+                    </Form>
                 </Modal>
                 <div
                     className="m-2 p-3 rounded-2"
