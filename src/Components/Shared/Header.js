@@ -78,7 +78,10 @@ const Header = () => {
                         </Button>
                     </InputGroup>
                     <div className="d-flex align-item-center">
-                        <div className="me-4 d-flex align-item-center">
+                        <div
+                            className="me-4 d-flex align-item-center"
+                            title="Cart"
+                        >
                             <CustomLink
                                 to="/shipping-bag"
                                 className="position-relative d-flex align-items-center  ms-2"
@@ -96,6 +99,7 @@ const Header = () => {
                         <div className="border ms-2">
                             {values.map((v, idx) => (
                                 <Button
+                                    title="Menu"
                                     key={idx}
                                     className=" border-0 btn-outline-none btn-light fs-3"
                                     onClick={() => handleShow(v)}

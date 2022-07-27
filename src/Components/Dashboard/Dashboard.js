@@ -2,8 +2,6 @@ import React from "react";
 import { useQuery } from "react-query";
 import { TbLayoutDashboard } from "react-icons/tb";
 import { FiHardDrive } from "react-icons/fi";
-import { MdReviews } from "react-icons/md";
-import { FaUsers } from "react-icons/fa";
 import { HiOutlineUserAdd } from "react-icons/hi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Nav, Navbar } from "react-bootstrap";
@@ -17,13 +15,13 @@ import Loading from "../Shared/Loading";
 const Dashboard = () => {
     const [user, loading] = useAuthState(auth);
 
-    const { data, isLoading } = useQuery("currentUser", () =>
-        fetch(
-            `https://creative-agency-2022.herokuapp.com/users/${user.email}`
-        ).then((res) => res.json())
-    );
+    // const { data, isLoading } = useQuery("currentUser", () =>
+    //     fetch(
+    //         `https://creative-agency-2022.herokuapp.com/users/${user.email}`
+    //     ).then((res) => res.json())
+    // );
 
-    if (loading || isLoading) {
+    if (loading) {
         return <Loading />;
     }
 

@@ -30,6 +30,7 @@ const Products = ({ product }) => {
                     <h3 className=" d-flex justify-content-between align-items-center">
                         <p className="m-0">${price}</p>
                         <Link
+                            title="Add to cart"
                             to={`/shop/${_id}`}
                             // onClick={() => handleAddToCart(_id)}
                             className=" btn rounded-pill bg-alert-success"
