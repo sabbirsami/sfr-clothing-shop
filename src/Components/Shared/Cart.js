@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
 import { useState } from "react";
@@ -13,7 +13,7 @@ import PageTitle from "./PageTitle";
 const Cart = () => {
     const { id } = useParams();
     const [user, loading] = useAuthState(auth);
-    const [customers, setCustomers] = useState([]);
+    // const [customers, setCustomers] = useState([]);
     // useEffect(() => {
     //     fetch("feedback.json")
     //         .then((res) => res.json())

@@ -1,5 +1,4 @@
 import React from "react";
-import { useQuery } from "react-query";
 import { TbLayoutDashboard } from "react-icons/tb";
 import { FiHardDrive } from "react-icons/fi";
 import { HiOutlineUserAdd } from "react-icons/hi";

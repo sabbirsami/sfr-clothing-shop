@@ -11,7 +11,7 @@ import Header from "./Header";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "./CheckoutForm";
-import { FloatingLabel, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import PageTitle from "./PageTitle";
 const stripePromise = loadStripe(
     "pk_test_51L2vNMJH0mXagrhOdzLEhBYwbNjUZQy6o9TQRQP00TOEqz5YJutO7I2OjEflJDptHPmz9U3iLzgX9sBRtIlYTIB900kUiVeM24"

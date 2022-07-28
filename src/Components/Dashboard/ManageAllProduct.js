@@ -3,7 +3,6 @@ import toast from "react-hot-toast";
 import Pagination from "react-bootstrap/Pagination";
 import { Button, Form, Modal } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { useQuery } from "react-query";
 
 const ManageAllProduct = () => {
     const { register, reset, handleSubmit } = useForm();
