@@ -98,7 +98,7 @@ const Cart = () => {
                                     Stock: {stock}
                                 </p>
                                 <div className="d-flex ">
-                                    <div className="col-2">
+                                    <div className="col-lg-2 col-6">
                                         <InputGroup className="mb-3">
                                             <InputGroup.Text
                                                 className="pe-auto p-0"
