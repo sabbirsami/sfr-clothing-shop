@@ -24,6 +24,7 @@ import MyOrders from "./Components/Dashboard/MyOrders";
 import ManageOrders from "./Components/Dashboard/ManageOrders";
 import Payment from "./Components/Dashboard/Payment";
 import AddAdmin from "./Components/Dashboard/AddAdmin";
+import AllInformation from "./Components/Dashboard/AllInformation";
 
 function App() {
     return (
@@ -41,6 +42,7 @@ function App() {
                 <Route path="/about" element={<About />}></Route>
                 <Route path="/contact" element={<Contact />}></Route>
                 <Route path="/dashboard" element={<Dashboard />}>
+                    <Route index element={<AllInformation />}></Route>
                     <Route
                         path="manage-all-product"
                         element={<ManageAllProduct />}
