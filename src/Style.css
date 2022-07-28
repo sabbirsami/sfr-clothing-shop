@@ -1,5 +1,5 @@
 body {
-    font-family: "Libre Baskerville", serif;
+    font-family: "Dancing Script", cursive;
     font-family: "Poppins", sans-serif !important;
 }
 .hero-bg {
@@ -8,6 +8,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+}
+.user-name-font {
+    font-family: "Dancing Script", cursive !important;
 }
 @media screen and (max-width: 767px) {
     .w-15 {

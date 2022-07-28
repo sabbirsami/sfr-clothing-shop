@@ -25,12 +25,9 @@ const Header = () => {
         isLoading,
         // refetch,
     } = useQuery("orders", () =>
-        fetch(
-            `https://sfr-clothing-store.herokuapp.com/orders/${user?.email}`,
-            {
-                method: "GET",
-            }
-        ).then((res) => res.json())
+        fetch(`http://localhost:5000/orders/${user?.email}`, {
+            method: "GET",
+        }).then((res) => res.json())
     );
 
     if (isLoading || loading) {

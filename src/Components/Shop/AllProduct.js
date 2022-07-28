@@ -9,12 +9,12 @@ const AllProduct = () => {
     const [page, setPage] = useState(0);
 
     const { data: products, isLoading } = useQuery(["products", page], () =>
-        fetch(
-            `https://sfr-clothing-store.herokuapp.com/products?page=${page}&size=${12}`
-        ).then((res) => res.json())
+        fetch(`http://localhost:5000/products?page=${page}&size=${12}`).then(
+            (res) => res.json()
+        )
     );
     useEffect(() => {
-        fetch("https://sfr-clothing-store.herokuapp.com/productCount")
+        fetch("http://localhost:5000/productCount")
             .then((res) => res.json())
             .then((data) => {
                 const counts = data.count;

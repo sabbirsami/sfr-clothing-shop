@@ -27,12 +27,9 @@ const ShippingBag = () => {
         isLoading,
         refetch,
     } = useQuery("orders", () =>
-        fetch(
-            `https://sfr-clothing-store.herokuapp.com/orders/${user?.email}`,
-            {
-                method: "GET",
-            }
-        ).then((res) => res.json())
+        fetch(`http://localhost:5000/orders/${user?.email}`, {
+            method: "GET",
+        }).then((res) => res.json())
     );
 
     if (isLoading || loading) {
@@ -42,7 +39,7 @@ const ShippingBag = () => {
 
     const handleCancel = (id) => {
         console.log(id);
-        fetch(`https://sfr-clothing-store.herokuapp.com/orders/${id}`, {
+        fetch(`http://localhost:5000/orders/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())

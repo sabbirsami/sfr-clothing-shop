@@ -53,12 +53,12 @@ const Dashboard = () => {
                                 </div>
                                 <div className="col-lg-2 d-flex justify-content-end align-items-center">
                                     <div>
-                                        <h5 className="fw-semi-bold m-0 text-success">
+                                        <h3 className="fw-semi-bold m-0 text-success user-name-font">
                                             {user?.displayName}
-                                        </h5>
-                                        <p className="m-0">
+                                        </h3>
+                                        {/* <p className="m-0">
                                             <small>{user?.email}</small>
-                                        </p>
+                                        </p> */}
                                     </div>
                                 </div>
                             </div>
