@@ -222,7 +222,7 @@ const ShippingBag = () => {
                                         <div className="">
                                             <div className="row flex-column py-2 mb-2 rounded-3 align-items-center justify-content-between">
                                                 <div className="">
-                                                    <div className="d-flex align-items-">
+                                                    <div className="d-flex align-items-center">
                                                         <div className="product-image col-lg-2 col-5 bg-light rounded">
                                                             <img
                                                                 className="img-fluid rounded"
@@ -242,13 +242,15 @@ const ShippingBag = () => {
                                                                     {
                                                                         order.quantity
                                                                     }
+                                                                    ,{" "}
+                                                                    <span className="ps-2">
+                                                                        Price: $
+                                                                        {
+                                                                            order.price
+                                                                        }
+                                                                    </span>
                                                                 </p>
-                                                                <p className="m-0">
-                                                                    Price: $
-                                                                    {
-                                                                        order.price
-                                                                    }
-                                                                </p>
+
                                                                 <p className="m-0">
                                                                     Total: $
                                                                     {order.price *

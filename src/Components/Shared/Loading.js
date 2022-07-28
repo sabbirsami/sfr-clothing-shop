@@ -6,7 +6,7 @@ const Loading = () => {
             className="d-flex align-items-center justify-content-center"
             style={{ height: "70vh" }}
         >
-            <p className="fs-1">Loading...</p>
+            <p className="display-6 linear-wipe">Loading...</p>
         </div>
     );
 };
