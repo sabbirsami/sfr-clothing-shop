@@ -198,7 +198,7 @@ const ShippingBag = () => {
                                     <h1 className="display-5">Shopping Cart</h1>
                                 </div>
                                 <div className="">
-                                    <div
+                                    {/* <div
                                         className="row align-items-center justify-content-between rounded-2 py-4"
                                         // style={{ backgroundColor: "#F5F6FA" }}
                                     >
@@ -217,13 +217,13 @@ const ShippingBag = () => {
                                         <div className="col-2 fw-semibold">
                                             Remove
                                         </div>
-                                    </div>
+                                    </div> */}
                                     {allOrders.orders.map((order) => (
                                         <div className="">
-                                            <div className="row bg-light py-2 mb-2 rounded-3 align-items-center justify-content-between">
-                                                <div className="col-4">
-                                                    <div className="d-flex align-items-center">
-                                                        <div className="product-image col-lg-4 bg-light rounded">
+                                            <div className="row flex-column py-2 mb-2 rounded-3 align-items-center justify-content-between">
+                                                <div className="">
+                                                    <div className="d-flex align-items-">
+                                                        <div className="product-image col-lg-2 col-5 bg-light rounded">
                                                             <img
                                                                 className="img-fluid rounded"
                                                                 src={
@@ -236,31 +236,37 @@ const ShippingBag = () => {
                                                             <h5 className="">
                                                                 {order.name}
                                                             </h5>
+                                                            <div className="">
+                                                                <p className="m-0">
+                                                                    Qty:{" "}
+                                                                    {
+                                                                        order.quantity
+                                                                    }
+                                                                </p>
+                                                                <p className="m-0">
+                                                                    Price: $
+                                                                    {
+                                                                        order.price
+                                                                    }
+                                                                </p>
+                                                                <p className="m-0">
+                                                                    Total: $
+                                                                    {order.price *
+                                                                        order.quantity}
+                                                                </p>
+                                                                <button
+                                                                    onClick={() =>
+                                                                        handleCancel(
+                                                                            order._id
+                                                                        )
+                                                                    }
+                                                                    className="btn ps-0 border-0 text-danger"
+                                                                >
+                                                                    Remove
+                                                                </button>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div className="col-1">
-                                                    {order.quantity}
-                                                </div>
-                                                <div className="col-1">
-                                                    ${order.price}
-                                                </div>
-                                                <div className="col-1">
-                                                    $
-                                                    {order.price *
-                                                        order.quantity}
-                                                </div>
-                                                <div className="col-2 text-start">
-                                                    <button
-                                                        onClick={() =>
-                                                            handleCancel(
-                                                                order._id
-                                                            )
-                                                        }
-                                                        className="btn ps-0 border-0 text-danger"
-                                                    >
-                                                        Remove
-                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
