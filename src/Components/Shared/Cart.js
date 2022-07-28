@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
 import { useState } from "react";
@@ -12,6 +12,15 @@ import Header from "./Header";
 const Cart = () => {
     const { id } = useParams();
     const [user, loading] = useAuthState(auth);
+    // const [customers, setCustomers] = useState([]);
+    // useEffect(() => {
+    //     fetch("feedback.json")
+    //         .then((res) => res.json())
+    //         .then((result) => {
+    //             setCustomers(result);
+    //             console.log(result);
+    //         });
+    // }, []);
     const {
         data: product,
         isLoading,
@@ -21,6 +30,7 @@ const Cart = () => {
             (res) => res.json()
         )
     );
+
     const [orderQuantity, setOrderQuantity] = useState(1);
     // const { productImage, setProductImage } = useState("");
 
@@ -140,6 +150,33 @@ const Cart = () => {
                             </div>
                         </div>
                     </div>
+                    {/* <div className="row">
+                        <div className="row pb-5">
+                            {customers.map((customer) => (
+                                <div className="col-lg-4">
+                                    <div className="p-3 border border-1">
+                                        <div className="d-flex align-items-center">
+                                            <img
+                                                className="w-10"
+                                                src={customer.img}
+                                                alt=""
+                                            />
+
+                                            <div className="ps-3 pt-3">
+                                                <h5 className="fw-bold m-0 pt-2">
+                                                    {customer.name}
+                                                </h5>
+                                                <p>{customer.position}</p>
+                                            </div>
+                                        </div>
+                                        <div className="p-2">
+                                            <p>{customer.dis}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div> */}
                 </div>
             </div>
         </>
