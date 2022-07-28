@@ -11,6 +11,7 @@ import { Link, Outlet } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import DashboardLink from "../Shared/DashboardLink";
 import Loading from "../Shared/Loading";
+import PageTitle from "../Shared/PageTitle";
 
 const Dashboard = () => {
     const [user, loading] = useAuthState(auth);
@@ -27,6 +28,7 @@ const Dashboard = () => {
 
     return (
         <div>
+            <PageTitle title="Dashboard -"></PageTitle>
             {/* DASHBOARD HEADER START */}
             <div className="mt-2">
                 <div className="container-fluid">

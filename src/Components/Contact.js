@@ -1,10 +1,12 @@
 import React from "react";
 import { Form } from "react-bootstrap";
 import Header from "./Shared/Header";
+import PageTitle from "./Shared/PageTitle";
 
 const Contact = () => {
     return (
         <>
+            <PageTitle title="Contact -"></PageTitle>
             <Header />
             <div className="contact-pattern">
                 <div className="container-fluid contact-bg">

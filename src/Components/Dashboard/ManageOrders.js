@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "react-query";
 import toast from "react-hot-toast";
+import Loading from "../Shared/Loading";
 
 const ManageOrders = () => {
     const {
@@ -14,7 +15,7 @@ const ManageOrders = () => {
     );
 
     if (isLoading) {
-        return <p>Loading...</p>;
+        return <Loading />;
     }
     console.log(orders);
     const handleDelete = (id) => {

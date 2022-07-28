@@ -8,6 +8,7 @@ import toast from "react-hot-toast";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import Header from "./Header";
+import PageTitle from "./PageTitle";
 
 const Cart = () => {
     const { id } = useParams();
@@ -86,6 +87,7 @@ const Cart = () => {
 
     return (
         <>
+            <PageTitle title="Cart -"></PageTitle>
             <Header />
             <div>
                 <div className="container py-5">
@@ -151,7 +153,7 @@ const Cart = () => {
                         </div>
                     </div>
 
-                    <div className="row pb-5">
+                    {/* <div className="row pb-5">
                         <h1 className="display-5">Review</h1>
                         {customers.map((customer) => (
                             <div className="col-lg-4">
@@ -176,7 +178,7 @@ const Cart = () => {
                                 </div>
                             </div>
                         ))}
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>

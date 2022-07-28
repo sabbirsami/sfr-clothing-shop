@@ -11,7 +11,7 @@ const Cloth = () => {
         }).then((res) => res.json())
     );
 
-    if (true) {
+    if (isLoading) {
         return <Loading />;
     }
     console.log(products);
