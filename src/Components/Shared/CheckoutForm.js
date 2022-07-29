@@ -15,13 +15,16 @@ const CheckoutForm = ({ totalCost }) => {
     console.log(clientSecret);
 
     useEffect(() => {
-        fetch("http://localhost:5000/create-payment-intent", {
-            method: "POST",
-            headers: {
-                "content-type": "application/json",
-            },
-            body: JSON.stringify({ totalCost }),
-        })
+        fetch(
+            "https://sfr-clothing-store.herokuapp.com/create-payment-intent",
+            {
+                method: "POST",
+                headers: {
+                    "content-type": "application/json",
+                },
+                body: JSON.stringify({ totalCost }),
+            }
+        )
             .then((res) => res.json())
             .then((data) => {
                 if (data?.clientSecret) {

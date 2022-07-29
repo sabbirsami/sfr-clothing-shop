@@ -9,7 +9,9 @@ const ManageOrders = () => {
         refetch,
         isLoading,
     } = useQuery("manageOrder", () =>
-        fetch(`http://localhost:5000/orders`).then((res) => res.json())
+        fetch(`https://sfr-clothing-store.herokuapp.com/orders`).then((res) =>
+            res.json()
+        )
     );
 
     if (isLoading) {
@@ -18,7 +20,7 @@ const ManageOrders = () => {
     console.log(orders);
     const handleDelete = (id) => {
         console.log(id);
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://sfr-clothing-store.herokuapp.com/orders/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())

@@ -5,13 +5,13 @@ import Loading from "../Shared/Loading";
 const AllInformation = () => {
     const [pageCount, setPageCount] = useState(0);
     const { data: orderCount, isLoading } = useQuery("countOrder", () =>
-        fetch(`http://localhost:5000/ordersCount`, {
+        fetch(`https://sfr-clothing-store.herokuapp.com/ordersCount`, {
             method: "GET",
         }).then((res) => res.json())
     );
 
     useEffect(() => {
-        fetch("http://localhost:5000/productCount")
+        fetch("https://sfr-clothing-store.herokuapp.com/productCount")
             .then((res) => res.json())
             .then((data) => {
                 const counts = data.count;

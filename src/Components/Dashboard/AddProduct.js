@@ -35,7 +35,7 @@ const AddProduct = () => {
                         details: data.details,
                         image: image,
                     };
-                    fetch("http://localhost:5000/products", {
+                    fetch("https://sfr-clothing-store.herokuapp.com/products", {
                         method: "POST",
                         headers: {
                             "content-type": "application/json",

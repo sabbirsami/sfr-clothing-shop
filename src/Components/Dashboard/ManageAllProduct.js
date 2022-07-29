@@ -24,12 +24,14 @@ const ManageAllProduct = () => {
     //     refetch,
     // } = useQuery("singleProductUpdate", () =>
     //     fetch(
-    //         `http://localhost:5000/products/${updateId}`
+    //         `https://sfr-clothing-store.herokuapp.com/products/${updateId}`
     //     ).then((res) => res.json())
     // );
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products?page=${page}&size=${10}`)
+        fetch(
+            `https://sfr-clothing-store.herokuapp.com/products?page=${page}&size=${10}`
+        )
             .then((res) => res.json())
             .then((data) => {
                 setProducts(data);
@@ -38,7 +40,7 @@ const ManageAllProduct = () => {
     }, [page, products]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/productCount")
+        fetch("https://sfr-clothing-store.herokuapp.com/productCount")
             .then((res) => res.json())
             .then((data) => {
                 const counts = data.count;
@@ -61,7 +63,7 @@ const ManageAllProduct = () => {
     const handleUpdate = (data) => {
         console.log(data);
         console.log(updateId);
-        fetch(`http://localhost:5000/products/${updateId}`, {
+        fetch(`https://sfr-clothing-store.herokuapp.com/products/${updateId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -82,7 +84,7 @@ const ManageAllProduct = () => {
 
     const handleDelete = (id) => {
         console.log(id);
-        fetch(`http://localhost:5000/products/${id}`, {
+        fetch(`https://sfr-clothing-store.herokuapp.com/products/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())
