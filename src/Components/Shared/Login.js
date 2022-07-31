@@ -13,6 +13,7 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import Header from "./Header";
+import Loading from "./Loading";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -32,7 +33,7 @@ const Login = () => {
     } = useForm();
 
     if (loading || googleLoading || facebookLoading || githubLoading) {
-        return <p>Loading...</p>;
+        return <Loading />;
     }
 
     let loginError;
