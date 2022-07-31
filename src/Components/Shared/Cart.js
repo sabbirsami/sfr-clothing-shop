@@ -9,6 +9,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import Header from "./Header";
 import PageTitle from "./PageTitle";
+import Loading from "./Loading";
 
 const Cart = () => {
     const { id } = useParams();
@@ -36,7 +37,7 @@ const Cart = () => {
     // const { productImage, setProductImage } = useState("");
 
     if (isLoading || loading) {
-        return <p>Loading..</p>;
+        return <Loading />;
     }
 
     const { name, price, brand, stock, description, image, details } =
