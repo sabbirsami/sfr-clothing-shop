@@ -19,7 +19,7 @@ const useToken = (user) => {
                     toast.success("Successfully update");
                     console.log("Success:", data);
                     const accessToken = data.token;
-                    localStorage.setItem("accessToken", accessToken);
+                    localStorage.setItem("sfrAccessToken", accessToken);
                     setToken(accessToken);
                 })
                 .catch((error) => {

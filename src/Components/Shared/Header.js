@@ -38,6 +38,7 @@ const Header = () => {
     }
     const logout = () => {
         signOut(auth);
+        localStorage.removeItem("sfrAccessToken");
     };
 
     function handleShow(breakpoint) {

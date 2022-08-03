@@ -27,12 +27,14 @@ const ShippingBag = () => {
         isLoading,
         refetch,
     } = useQuery("orders", () =>
-        fetch(
-            `https://sfr-clothing-store.herokuapp.com/orders/${user?.email}`,
-            {
-                method: "GET",
-            }
-        ).then((res) => res.json())
+        fetch(`http://localhost:5000/orders/${user?.email}`, {
+            method: "GET",
+            headers: {
+                authorization: `Bearer ${localStorage.getItem(
+                    "sfrAccessToken"
+                )}`,
+            },
+        }).then((res) => res.json())
     );
 
     if (isLoading || loading) {
@@ -289,10 +291,10 @@ const ShippingBag = () => {
                             </div>
                         </div>
                         <div
-                            className="col-lg-4"
-                            style={{ backgroundColor: "#F5F5F6" }}
+                            className="col-lg-4  border-start"
+                            // style={{ backgroundColor: "#F5F5F6" }}
                         >
-                            <div className="py-5 px-2">
+                            <div className="py-5 ps-lg-4 px-lg-0 px-2">
                                 <div className="pb-4">
                                     <h1 className="display-5">Order Summary</h1>
                                 </div>
@@ -303,7 +305,7 @@ const ShippingBag = () => {
                                 <div className="mb-4">
                                     <p className="fw-semibold mb-1">SHIPPING</p>
                                     <div className="bg-white">
-                                        <p className="px-3 py-3 mb-0">
+                                        <p className="px-3 py-3 mb-0 bg-light">
                                             Standard Delivery - $3.00
                                         </p>
                                     </div>
