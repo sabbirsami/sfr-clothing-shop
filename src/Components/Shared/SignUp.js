@@ -14,6 +14,7 @@ import {
 import Loading from "./Loading";
 import auth from "../../firebase.init";
 import Header from "./Header";
+import useToken from "../Hooks/useToken";
 
 const SignUp = () => {
     const navigate = useNavigate();
@@ -30,12 +31,9 @@ const SignUp = () => {
         handleSubmit,
         formState: { errors },
     } = useForm();
+    const [token] = useToken(googleUser || facebookUser || user);
+    console.log(user);
 
-    const onSubmit = async (data) => {
-        await createUserWithEmailAndPassword(data.email, data.password);
-        await updateProfile({ displayName: data.name });
-        reset();
-    };
     if (loading || updating || googleLoading || facebookLoading) {
         return <Loading />;
     }
@@ -48,7 +46,13 @@ const SignUp = () => {
             </p>
         );
     }
-    if (googleUser || facebookUser || user) {
+    const onSubmit = async (data) => {
+        await createUserWithEmailAndPassword(data.email, data.password);
+        await updateProfile({ displayName: data.name });
+        reset();
+    };
+
+    if (token) {
         navigate("/");
     }
     return (
@@ -139,7 +143,7 @@ const SignUp = () => {
                                             </p>
                                         </FloatingLabel>
 
-                                        <div className="d-flex justify-content-between">
+                                        {/* <div className="d-flex justify-content-between">
                                             <Form.Group className="mb-3">
                                                 <small>
                                                     <Form.Check
@@ -150,14 +154,14 @@ const SignUp = () => {
                                                     />
                                                 </small>
                                             </Form.Group>
-                                        </div>
+                                        </div> */}
                                         {loginError}
                                         <div className="py-3">
                                             <button
                                                 className="rounded-pill px-5 py-2 btn btn-outline-primary"
                                                 type="submit"
                                             >
-                                                Log In
+                                                Sign Up
                                             </button>
                                         </div>
                                     </Form>
