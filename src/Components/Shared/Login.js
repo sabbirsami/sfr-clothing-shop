@@ -14,6 +14,7 @@ import {
 import auth from "../../firebase.init";
 import Header from "./Header";
 import Loading from "./Loading";
+import useToken from "../Hooks/useToken";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -31,6 +32,7 @@ const Login = () => {
         reset,
         handleSubmit,
     } = useForm();
+    const [token] = useToken(googleUser || facebookUser || user);
 
     if (loading || googleLoading || facebookLoading || githubLoading) {
         return <Loading />;
@@ -49,7 +51,7 @@ const Login = () => {
             </p>
         );
     }
-    if (user || googleUser || facebookUser || githubUser) {
+    if (token) {
         navigate("/");
     }
     const onSubmit = (data) => {
