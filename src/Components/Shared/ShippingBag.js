@@ -27,14 +27,17 @@ const ShippingBag = () => {
         isLoading,
         refetch,
     } = useQuery("orders", () =>
-        fetch(`http://localhost:5000/orders/${user?.email}`, {
-            method: "GET",
-            headers: {
-                authorization: `Bearer ${localStorage.getItem(
-                    "sfrAccessToken"
-                )}`,
-            },
-        }).then((res) => res.json())
+        fetch(
+            `https://sfr-clothing-store.herokuapp.com/orders/${user?.email}`,
+            {
+                method: "GET",
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem(
+                        "sfrAccessToken"
+                    )}`,
+                },
+            }
+        ).then((res) => res.json())
     );
 
     if (isLoading || loading) {
