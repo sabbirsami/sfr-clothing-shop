@@ -16,7 +16,6 @@ const useToken = (user) => {
             })
                 .then((response) => response.json())
                 .then((data) => {
-                    toast.success("Successfully update");
                     const accessToken = data.token;
                     localStorage.setItem("sfrAccessToken", accessToken);
                     setToken(accessToken);

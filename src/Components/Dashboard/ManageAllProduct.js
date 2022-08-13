@@ -10,7 +10,6 @@ const ManageAllProduct = () => {
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
     const [updateId, setUpdateId] = useState("");
-    // console.log(updateId);
 
     // UPDATE MODAL
     const [show, setShow] = useState(false);
